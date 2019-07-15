@@ -1,0 +1,18 @@
+{
+  "extends": ["tslint:recommended", "tslint-react", "tslint-config-prettier", "plugin:@typescript-eslint/eslint-recommended","plugin:@typescript-eslint/recommended"],
+  "rules": {
+    "no-console": false,
+    "no-var-requires": false,
+    "object-literal-sort-keys": false,
+    "object-literal-shorthand": false,
+    "js-no-bind": false,
+    "jsx-no-lambada": false
+  },
+  "linterOptions":   {
+    "exclude": [
+      "config/**/*.js",
+      "node_modules/**/*.ts",
+      "coverage/*"
+    ]
+  }
+}
