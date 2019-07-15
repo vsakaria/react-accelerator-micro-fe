@@ -23,11 +23,28 @@
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.title {
+  color: #006a4d;
+}
+
+.clientDetailContainer {
+  background-color: white;
+  padding: 10px;
+  width: 50%;
+}
+
+.clientSummaryDetails {
+  margin-left: 80px;
+  margin-top: 80px;
+  background-color: lightgrey;
+  padding: 30px;
+  width: 50%;
+}
+
+td {
+  padding: 11px 10px 11px 0;
+}
+
+.bold {
+  font-weight: bold;
 }

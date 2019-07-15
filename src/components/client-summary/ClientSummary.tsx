@@ -1,2 +1,18 @@
-import * as React from 'react';
-import Container from 'react-strap';
+import React from "react";
+import ClientDetails from "./ClientDetails";
+import "../../App.css";
+
+const ClientSummary: React.FC = () => (
+  <section className="clientSummaryDetails">
+    <h1 className="title">Client Summary</h1>
+    <ClientDetails
+      id={49084369}
+      name="AutoCBS1"
+      status="Active"
+      adminType="Single Admin"
+      passwordExpiryPeriod={90}
+      activeFrom="24/05/2019" //We could use a Date type here.
+    />
+  </section>
+);
+export default ClientSummary;
