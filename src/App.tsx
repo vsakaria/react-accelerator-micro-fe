@@ -2,7 +2,7 @@ import React from "react";
 import "./App.css";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import { Container } from "reactstrap";
-import ClientSummary from "./components/client-summary/ClientSummary";
+import ClientSummary from "./components/clientSummary/ClientSummary";
 
 const App: React.FC = () => (
   <>
