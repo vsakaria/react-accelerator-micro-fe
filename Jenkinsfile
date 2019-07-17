@@ -41,7 +41,7 @@ pipeline {
 
                 dockerfile {
                     filename 'Dockerfile'
-                    args '-p 3000:3000 --no-cache'
+                    args '-p 3000:3000'
                     registryCredentialsId 'registry.sbx.zone'
                     registryUrl 'https://combined-registry.sbx.zone'
                     label 'cbo-jenkins'
