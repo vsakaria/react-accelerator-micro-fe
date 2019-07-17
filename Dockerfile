@@ -7,8 +7,8 @@ ENV PATH /usr/src/app/node_modules/.bin:$PATH
 
 COPY package.json /usr/src/app/package.json
 RUN npm config set registry="https://nexus.sbx.zone/repository/npm-proxy"
-RUN npm install --verbose
-RUN npm install react-scripts@3.0.1 -g --verbose
+RUN npm install
+RUN npm install react-scripts@3.0.1 -g
 
 COPY . /usr/src/app
 

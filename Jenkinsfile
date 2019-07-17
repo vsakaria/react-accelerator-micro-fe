@@ -58,7 +58,7 @@ pipeline {
                     pwd
                     mkdir jest-reports
                     cd /usr/src/app
-                    npm test
+                    npm test -a
                     pwd
                     cd -
                     cp -r /usr/src/app/coverage/* jest-reports/
