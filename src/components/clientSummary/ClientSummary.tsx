@@ -1,6 +1,6 @@
 import React from "react";
 import ClientDetails from "../clientDetails/ClientDetails";
-import "./ClientSummary.css";
+import "./styles/ClientSummary.css";
 
 const ClientSummary: React.FC = () => (
   <section className="clientSummaryDetails">
