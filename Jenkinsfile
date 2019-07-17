@@ -111,6 +111,81 @@ pipeline {
 
         }
 
+        stage('Build App') {
+
+            agent {
+
+                dockerfile {
+                    filename 'Dockerfile.production'
+                    args '-p 3000:3000'
+                    registryCredentialsId 'registry.sbx.zone'
+                    registryUrl 'https://combined-registry.sbx.zone'
+                    label 'cbo-jenkins'
+                    reuseNode true
+
+                }
+            }
+
+            steps {
+                echo 'Building Production Docker Image'
+
+                script {
+
+                    if (params.Upload_Pkg_To_UrbanCode == true) {
+                        echo "Stash CWA Code"
+
+                        sh '''
+                           pwd
+                           mkdir cwa
+                           cd /usr/share/nginx/
+                           ls -l
+                           pwd
+                           cd -
+                           cp -r /usr/share/nginx/* cwa/         
+                        '''
+
+                        stash name: "CWACode", includes: "cwa/**/*"
+                    }
+                }
+
+            }
+
+        }
+
+        stage('Publish Image') {
+            when {
+                expression { env.BRANCH_NAME == "master" || env.BRANCH_NAME.startsWith("release-br") || env.BRANCH_NAME == "CBODIG-10206_Pipeline" }
+            }
+            steps {
+
+                dir("${WORKSPACE}") {
+                    echo 'Building Docker Base Image for cwa'
+                    script {
+
+                        try {
+                            def dockerImage
+                            docker.withRegistry('https://combined-registry.sbx.zone', 'registry.sbx.zone') {
+                                dockerImage = docker.build("${props.name}:${props.version}-${env.BUILD_NUMBER}", "-f Dockerfile.production --no-cache .")
+                            }
+
+                            //Code below works - commented out during development
+                            //TODO: Uncomment lines below to upload to Nexus
+                            docker.withRegistry('https://registry.sbx.zone', 'registry.sbx.zone') {
+                                dockerImage.push();
+                            }
+
+                        } catch (e) {
+                            echo "Failed to publish image ${props.name}:${props.version}-${env.BUILD_NUMBER}"
+                            throw e
+                        }
+
+                        echo "Published Image ${props.name}:${props.version}-${env.BUILD_NUMBER}"
+
+                    }
+                }
+            }
+        }
+
 
 
     }
