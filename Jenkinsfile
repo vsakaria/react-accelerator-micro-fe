@@ -51,8 +51,10 @@ pipeline {
             }
 
             steps {
+                echo 'Running Unit Tests'
+                script {
 
-                sh '''
+                    sh '''
                     pwd
                     mkdir jest-reports
                     cd /usr/src/app
@@ -63,16 +65,17 @@ pipeline {
                     
                  '''
 
-                publishHTML(target:
-                        [allowMissing         : false,
-                         alwaysLinkToLastBuild: true,
-                         keepAll              : true,
-                         reportDir            : 'jest-reports/lcov-report',
-                         reportFiles          : 'index.html',
-                         reportName           : 'Jest Test Coverage Report'])
+                    publishHTML(target:
+                            [allowMissing         : false,
+                             alwaysLinkToLastBuild: true,
+                             keepAll              : true,
+                             reportDir            : 'jest-reports/lcov-report',
+                             reportFiles          : 'index.html',
+                             reportName           : 'Jest Test Coverage Report'])
 
-                stash name: "JUNIT-REPORTS", includes: "jest-reports/**/*"
+                    stash name: "JUNIT-REPORTS", includes: "jest-reports/**/*"
 
+                }
             }
         }
 
