@@ -186,6 +186,41 @@ pipeline {
             }
         }
 
+        stage('DAST Test') {
+
+            //TODO - Using hardcoded url for running DAST. This should be changed for Bluemix/Rancher url once
+            // test code is deployed
+
+            steps {
+
+                script {
+
+                    docker.withRegistry('https://combined-registry.sbx.zone', 'registry.sbx.zone') {
+                        sh 'docker pull combined-registry.sbx.zone/owasp/zap2docker-weekly:latest'
+
+                        sh """
+                                            cd  ${WORKSPACE}/build-resources
+                                            chmod u+x ./Zap.sh
+                                            cd -
+                                            ./build-resources/Zap.sh \
+                                            "http://10.112.207.145:3000/" 
+                                            pwd
+                                        """
+
+                        publishHTML(
+                                [allowMissing         : false,
+                                 alwaysLinkToLastBuild: false,
+                                 keepAll              : false,
+                                 reportDir            : 'zap-reports',
+                                 reportFiles          : 'zap-report.html',
+                                 reportName           : 'ZAP Report'])
+
+                    }
+                }
+
+            }
+        }
+
     }
 
     post {
