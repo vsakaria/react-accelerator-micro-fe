@@ -13,7 +13,7 @@ const ClientDetails: React.FC<IClient> = ({
 }) => {
   return (
     <section className={styles.clientDetailContainer}>
-      <h4 className={styles.title}>Client details</h4>
+      <h4 className="title">Client details</h4>
       <table className={styles.clientDetailTable}>
         <tbody>
           <tr>

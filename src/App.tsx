@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 import { Container } from "reactstrap";
 import ClientSummary from "./components/clientSummary/ClientSummary";
 import ErrorBoundary from "./utils/components/ErrorBoundary";
+import "./css/Global.module.css";
 
 const App: React.FC = () => (
   <>
