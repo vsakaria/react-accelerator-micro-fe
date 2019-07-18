@@ -22,7 +22,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "testCI": "CI=true react-scripts test --coverage --reporters=default --reporters=jest-junit",
+    "testCI": "CI=true react-scripts test --coverage --reporters=jest-junit",
     "eject": "react-scripts eject",
     "sonarqube": "sonarqube-scanner-node"
   },
