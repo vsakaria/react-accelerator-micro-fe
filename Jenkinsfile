@@ -103,7 +103,7 @@ pipeline {
                         sh '''
                             pwd
                             cd /usr/src/app
-                            npm run sonarqube           
+                            npm run sonarqube -- --Dsonar.branch=Master          
                         '''
                     }
                 }
@@ -154,7 +154,8 @@ pipeline {
 
         stage('Publish Image') {
             when {
-                expression { env.BRANCH_NAME == "master" || env.BRANCH_NAME.startsWith("release-br") || env.BRANCH_NAME == "CBODIG-10206_Pipeline" }
+                //expression { env.BRANCH_NAME == "master" || env.BRANCH_NAME.startsWith("release-br") || env.BRANCH_NAME == "CBODIG-10206_Pipeline" }
+                expression { env.BRANCH_NAME == "master" || env.BRANCH_NAME.startsWith("release-br")}
             }
             steps {
 
@@ -186,7 +187,7 @@ pipeline {
             }
         }
 
-        stage('DAST Test') {
+        /*stage('DAST Test') {
 
             //TODO - Using hardcoded url for running DAST. This should be changed for Bluemix/Rancher url once
             // test code is deployed
@@ -219,7 +220,7 @@ pipeline {
                 }
 
             }
-        }
+        }*/
 
     }
 
