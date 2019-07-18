@@ -103,7 +103,7 @@ pipeline {
                         sh '''
                             pwd
                             cd /usr/src/app
-                            npm run sonarqube -- -Dsonar.branch.name=Master          
+                            npm run sonarqube -- -Dsonar.branch=Master          
                         '''
                     }
                 }
