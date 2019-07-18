@@ -1,5 +1,6 @@
 import React from "react";
 import { IClient } from "../IClient";
+import { withErrorBoundary } from "../../utils/components/ErrorBoundaryHoC";
 
 const ClientDetails: React.FC<IClient> = ({
   id,
@@ -46,4 +47,4 @@ const ClientDetails: React.FC<IClient> = ({
   );
 };
 
-export default ClientDetails;
+export default withErrorBoundary(ClientDetails);
