@@ -109,7 +109,7 @@ pipeline {
                         sh '''
                             pwd
                             cd /usr/src/app
-                            npm run sonarqube -- -Dsonar.branch=${sonarBranch}         
+                            npm run sonarqube -- -Dsonar.branch=$sonarBranch         
                         '''
                     }
                 }
