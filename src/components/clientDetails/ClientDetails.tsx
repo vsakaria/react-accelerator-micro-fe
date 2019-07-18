@@ -1,6 +1,7 @@
 import React from "react";
 import { IClient } from "../IClient";
 import { withErrorBoundary } from "../../utils/components/ErrorBoundaryHoC";
+import styles from "./styles/ClientDetails.module.css";
 
 const ClientDetails: React.FC<IClient> = ({
   id,
@@ -11,35 +12,35 @@ const ClientDetails: React.FC<IClient> = ({
   activeFrom
 }) => {
   return (
-    <section className="clientDetailContainer">
-      <h4 className="title">Client details</h4>
-      <table>
+    <section className={styles.clientDetailContainer}>
+      <h4 className={styles.title}>Client details</h4>
+      <table className={styles.clientDetailTable}>
         <tbody>
           <tr>
             <td>Client id</td>
-            <td className="bold">{id.toString()}</td>
+            <td>{id.toString()}</td>
           </tr>
           <tr>
             <td>Client name</td>
-            <td className="bold">{name}</td>
+            <td>{name}</td>
           </tr>
           <tr>
             <td>Client status</td>
-            <td className="bold">{status}</td>
+            <td>{status}</td>
           </tr>
           <tr>
             <td>Administration type</td>
-            <td className="bold">{adminType}</td>
+            <td>{adminType}</td>
           </tr>
           <tr>
             <td>Password expiry period</td>
-            <td className="bold">{`${passwordExpiryPeriod} ${
+            <td>{`${passwordExpiryPeriod} ${
               passwordExpiryPeriod > 1 ? "days" : "day"
             }`}</td>
           </tr>
           <tr>
             <td>Active form</td>
-            <td className="bold">{activeFrom}</td>
+            <td>{activeFrom}</td>
           </tr>
         </tbody>
       </table>

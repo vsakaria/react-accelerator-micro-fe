@@ -1,9 +1,9 @@
 import React from "react";
 import ClientDetails from "../clientDetails/ClientDetails";
-import "./styles/ClientSummary.css";
+import styles from "./styles/ClientSummary.module.css";
 
 const ClientSummary: React.FC = () => (
-  <section className="clientSummaryDetails">
+  <section className={styles.clientSummaryDetails}>
     <h1 className="title">Client Summary</h1>
     <ClientDetails
       id={49084369}

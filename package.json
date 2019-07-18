@@ -26,8 +26,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "update-snap": "react-scripts test -u --watchAll=false",
-    "eject": "react-scripts eject",
-    "build-css": "node-sass-chokidar src/ -o src/ --watch --recursive"
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": "react-app"
