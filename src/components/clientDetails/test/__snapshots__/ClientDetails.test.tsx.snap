@@ -1,0 +1,97 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ClientSummary should display the title 1`] = `
+<ComponentWithErrorBoundary
+  activeFrom="24/05/2019"
+  adminType="Single Admin"
+  id={49084369}
+  name="AutoCBS1"
+  passwordExpiryPeriod={90}
+  status="Active"
+>
+  <ErrorBoundary>
+    <ClientDetails
+      activeFrom="24/05/2019"
+      adminType="Single Admin"
+      id={49084369}
+      name="AutoCBS1"
+      passwordExpiryPeriod={90}
+      status="Active"
+    >
+      <section
+        className="clientDetailContainer"
+      >
+        <h4
+          className="title"
+        >
+          Client details
+        </h4>
+        <table>
+          <tbody>
+            <tr>
+              <td>
+                Client id
+              </td>
+              <td
+                className="bold"
+              >
+                49084369
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Client name
+              </td>
+              <td
+                className="bold"
+              >
+                AutoCBS1
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Client status
+              </td>
+              <td
+                className="bold"
+              >
+                Active
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Administration type
+              </td>
+              <td
+                className="bold"
+              >
+                Single Admin
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Password expiry period
+              </td>
+              <td
+                className="bold"
+              >
+                90 days
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Active form
+              </td>
+              <td
+                className="bold"
+              >
+                24/05/2019
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </ClientDetails>
+  </ErrorBoundary>
+</ComponentWithErrorBoundary>
+`;
