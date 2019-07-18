@@ -170,9 +170,9 @@ pipeline {
 
                             //Code below works - commented out during development
                             //TODO: Uncomment lines below to upload to Nexus
-                            docker.withRegistry('https://registry.sbx.zone', 'registry.sbx.zone') {
-                                dockerImage.push();
-                            }
+                            //docker.withRegistry('https://registry.sbx.zone', 'registry.sbx.zone') {
+                            //    dockerImage.push();
+                            //}
 
                         } catch (e) {
                             echo "Failed to publish image ${props.name}:${props.version}-${env.BUILD_NUMBER}"
@@ -185,8 +185,6 @@ pipeline {
                 }
             }
         }
-
-
 
     }
 
