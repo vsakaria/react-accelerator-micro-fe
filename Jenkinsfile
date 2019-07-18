@@ -100,10 +100,16 @@ pipeline {
 
                     script {
 
+                        def sonarBranch = "Master"
+
+                        if(params.Build_Profile == 'CI') {
+                           sonarBranch = "CI_Master"
+                        }
+
                         sh '''
                             pwd
                             cd /usr/src/app
-                            npm run sonarqube -- -Dsonar.branch=Master          
+                            npm run sonarqube -- -Dsonar.branch=${sonarBranch}         
                         '''
                     }
                 }
