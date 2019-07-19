@@ -259,9 +259,10 @@ pipeline {
                             fi
                             mkdir uc_deploy_basedir
                             cd uc_deploy_basedir
-                            cp ${WORKSPACE}/cwa/**/* .
+                            cp -R ${WORKSPACE}/cwa/**/* .
                             cd ${WORKSPACE}
                             cp ${WORKSPACE}/build-resources/UrbanCode_client.sh .
+                            ls -l
                             chmod u+x ./UrbanCode_client.sh
                             ls -la ./UrbanCode_client.sh uc_deploy_basedir/
                             ./UrbanCode_client.sh \
