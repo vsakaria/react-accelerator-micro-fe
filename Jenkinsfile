@@ -24,6 +24,7 @@ pipeline {
                     echo 'Start list of changes in this build:'
                     sh 'git diff --name-only $GIT_PREVIOUS_COMMIT $GIT_COMMIT'
                     echo 'End list of changes in this build.'
+                    sh "echo Build type parameter ${params.buildType}"
                     sh "echo Build profile parameter ${params.Build_Profile}"
                     sh "echo Build going to upload to UC ${params.Upload_Pkg_To_UrbanCode}"
 
@@ -267,7 +268,7 @@ pipeline {
                             "Digital - CBO - CCMI - CWA - ClientSummary" \
                             "TBT" \
                             "ClientSummaryCWA" \
-                            "${buildType}_${BUILD_TAG}" \
+                            "${params.buildType}_${BUILD_TAG}" \
                             "uc_deploy_basedir/" \
                             "${AUTH_TOKEN}"
                         """
