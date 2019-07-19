@@ -196,7 +196,7 @@ pipeline {
             }
         }
 
-        stage('DAST Test') {
+        /*stage('DAST Test') {
 
             //TODO - Using hardcoded url for running DAST. This should be changed for Bluemix/Rancher url once
             // test code is deployed
@@ -228,6 +228,51 @@ pipeline {
                     }
                 }
 
+            }
+        }*/
+
+        stage('UrbanCode') {
+            agent {
+                label "cbo-jenkins-aurora"
+            }
+            when {
+                expression { env.BRANCH_NAME == "master" || env.BRANCH_NAME.startsWith("release-br") || env.BRANCH_NAME == "CBODIG-10206_Pipeline" }
+                expression { params.Upload_Pkg_To_UrbanCode == true }
+                //expression { params.Build_Profile != 'CI' }
+            }
+            steps {
+                script {
+                    echo 'On package upload to UC step.'
+                    echo "Node name is ${NODE_NAME}."
+
+                    echo "Un-stashing build artifact to upload to UrbanCode"
+                    unstash 'CWACode'
+
+                    withCredentials([string(credentialsId: 'ucd_token', variable: 'AUTH_TOKEN')]) {
+
+                        sh """
+                            cd  ${WORKSPACE}/
+                            if [ -d \\"uc_deploy_basedir\\" ]; then
+                                rm -rf uc_deploy_basedir
+                            fi
+                            mkdir uc_deploy_basedir
+                            cd uc_deploy_basedir
+                            cp ${WORKSPACE}/cwa/**/* .
+                            cd ${WORKSPACE}
+                            cp ${WORKSPACE}/build-resources/UrbanCode_client.sh .
+                            chmod u+x ./UrbanCode_client.sh
+                            ls -la ./UrbanCode_client.sh uc_deploy_basedir/
+                            ./UrbanCode_client.sh \
+                            "Digital - CBO - CCMI - CWA - ClientSummary" \
+                            "TBT" \
+                            "ClientSummaryCWA" \
+                            "${buildType}_${BUILD_TAG}" \
+                            "uc_deploy_basedir/" \
+                            "${AUTH_TOKEN}"
+                        """
+
+                    }
+                }
             }
         }
 
