@@ -9,8 +9,9 @@ pipeline {
     }
 
     parameters {
+        choice(name: 'buildType', choices: "RELEASE\nANALYTICS\nINFOSERVICES\nINTEGRATION\nSECURITY\nTRANSACTING\nPERFORMANCE\nCMP\nTEAMTRAILBLAZER", description: 'Build type for feature toggle group settings')
         choice(name: 'Build_Profile', choices: 'CI\nFull', description: 'Choose CI for compile/test/quality gates or Full for CI plus deploy.')
-        booleanParam(defaultValue: true, description: 'Run step to upload package to UrbanCode deploy', name: 'Upload_Pkg_To_UrbanCode')
+        booleanParam(name: 'Upload_Pkg_To_UrbanCode', defaultValue: true, description: 'Run step to upload package to UrbanCode deploy')
     }
 
     stages {
