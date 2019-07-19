@@ -100,17 +100,20 @@ pipeline {
 
                     script {
 
-                        def sonarBranch = "Master"
-
                         if(params.Build_Profile == 'CI') {
-                           sonarBranch = "CI_Master"
-                        }
 
-                        sh '''
-                            pwd
-                            cd /usr/src/app
-                            npm run sonarqube -- -Dsonar.branch=$sonarBranch         
-                        '''
+                            sh '''
+                                pwd
+                                cd /usr/src/app
+                                npm run sonarqube -- -Dsonar.branch=CI_Master         
+                            '''
+                        } else {
+                            sh '''
+                                pwd
+                                cd /usr/src/app
+                                npm run sonarqube -- -Dsonar.branch=Master         
+                            '''
+                        }
                     }
                 }
             }
@@ -193,7 +196,7 @@ pipeline {
             }
         }
 
-        /*stage('DAST Test') {
+        stage('DAST Test') {
 
             //TODO - Using hardcoded url for running DAST. This should be changed for Bluemix/Rancher url once
             // test code is deployed
@@ -226,7 +229,7 @@ pipeline {
                 }
 
             }
-        }*/
+        }
 
     }
 

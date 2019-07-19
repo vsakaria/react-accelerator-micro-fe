@@ -10,6 +10,7 @@ mkdir $REPORT_DIR && chmod 777 $REPORT_DIR
 fi
 
 function remove_zap_container() {
+  docker stop "${CONTAINER_ID}"
   docker rm -f "${CONTAINER_ID}"
 }
 
@@ -56,7 +57,8 @@ docker exec $CONTAINER_ID cat zap-report.html >${REPORT_DIR}/zap-report.html
 
 set -e
 
-remove_zap_container
+echo "Zap complete removing docker container"
+remove_zap_container || true
 
 # Check alerts
 if [[ "${ALERT_NUM}" -gt 0 ]]; then
