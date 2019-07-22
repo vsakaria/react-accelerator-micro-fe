@@ -4,7 +4,7 @@ import styles from "./styles/ClientSummary.module.css";
 
 const ClientSummary: React.FC = () => (
   <section className={styles.clientSummaryDetails}>
-    <h1 className="title">Client Summary</h1>
+    <h1 className="primary-color">Client Summary</h1>
     <ClientDetails
       id={49084369}
       name="AutoCBS1"
