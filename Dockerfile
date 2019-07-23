@@ -9,7 +9,7 @@ COPY package.json /usr/src/app/package.json
 COPY yarn.lock /usr/src/app/yarn.lock
 COPY .npmrc /usr/src/app/.npmrc
 
-RUN yarn config set registry="https://nexus.sbx.zone/repository/npm-proxy"
+RUN yarn config set registry="https://nexus.sbx.zone/repository/npm-proxy" --global
 RUN yarn install --verbose
 RUN yarn global add react-scripts@3.0.1 --verbose
 
