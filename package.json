@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@types/enzyme-to-json": "^1.5.3",
     "@types/jest": "24.0.15",
     "@types/node": "12.6.0",
     "@types/react": "16.8.23",
@@ -10,19 +11,22 @@
     "@types/react-router": "^5.0.3",
     "@types/react-router-dom": "^4.3.4",
     "@types/reactstrap": "^8.0.1",
+    "enzyme-to-json": "^3.3.5",
+    "node-sass-chokidar": "^1.3.5",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-router": "^5.0.1",
     "react-router-dom": "^5.0.1",
-    "react-scripts": "^3.0.1",
+    "react-scripts": "3.0.1",
     "reactstrap": "^8.0.1",
-    "typescript": "^3.5.3"
+    "typescript": "3.5.3"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "react-scripts test --env=jsdom",
     "testCI": "CI=true react-scripts test --coverage --reporters=jest-junit",
+    "update-snap": "react-scripts test -u --watchAll=false",
     "eject": "react-scripts eject",
     "sonarqube": "sonarqube-scanner-node"
   },
@@ -30,6 +34,9 @@
     "extends": "react-app"
   },
   "jest": {
+    "snapshotSerializers": [
+      "enzyme-to-json/serializer"
+    ],
     "collectCoverageFrom": [
       "**/src/*.{js}",
       "!**/node_modules/**",
@@ -61,6 +68,11 @@
     ]
   },
   "devDependencies": {
+    "@types/enzyme": "^3.10.3",
+    "@types/enzyme-adapter-react-16": "^1.0.5",
+    "enzyme": "^3.10.0",
+    "enzyme-adapter-react-16": "^1.14.0",
+    "react-test-renderer": "^16.8.6",
     "jest-junit": "^6.4.0",
     "sonarqube-scanner-node": "0.0.10"
   }

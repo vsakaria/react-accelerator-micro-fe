@@ -1,0 +1,6 @@
+@value colors: "./Color.module.css";
+@value primary-color from colors;
+
+:global(.primary-color) {
+  color: primary-color;
+}
