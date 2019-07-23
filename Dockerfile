@@ -11,7 +11,8 @@ ENV PATH /usr/src/app/node_modules/.bin:$PATH
 
 COPY package.json /usr/src/app/package.json
 COPY yarn.lock /usr/src/app/yarn.lock
-RUN yarn config set registry="https://nexus.sbx.zone/repository/npm-proxy"
+COPY .npmrc /usr/src/app/.npmrc
+
 RUN yarn install --verbose
 RUN yarn install react-scripts@3.0.1 -g --verbose
 
