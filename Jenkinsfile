@@ -165,7 +165,6 @@ pipeline {
 
         stage('Publish Image') {
             when {
-                //expression { env.BRANCH_NAME == "master" || env.BRANCH_NAME.startsWith("release-br") || env.BRANCH_NAME == "CBODIG-10206_Pipeline" }
                 expression { env.BRANCH_NAME == "master" || env.BRANCH_NAME.startsWith("release-br")}
             }
             steps {
@@ -180,11 +179,9 @@ pipeline {
                                 dockerImage = docker.build("${props.name}:${props.version}-${env.BUILD_NUMBER}", "-f Dockerfile.production --no-cache .")
                             }
 
-                            //Code below works - commented out during development
-                            //TODO: Uncomment lines below to upload to Nexus
-                            //docker.withRegistry('https://registry.sbx.zone', 'registry.sbx.zone') {
-                            //    dockerImage.push();
-                            //}
+                            docker.withRegistry('https://registry.sbx.zone', 'registry.sbx.zone') {
+                                dockerImage.push();
+                            }
 
                         } catch (e) {
                             echo "Failed to publish image ${props.name}:${props.version}-${env.BUILD_NUMBER}"
@@ -198,49 +195,14 @@ pipeline {
             }
         }
 
-        /*stage('DAST Test') {
-
-            //TODO - Using hardcoded url for running DAST. This should be changed for Bluemix/Rancher url once
-            // test code is deployed
-
-            steps {
-
-                script {
-
-                    docker.withRegistry('https://combined-registry.sbx.zone', 'registry.sbx.zone') {
-                        sh 'docker pull combined-registry.sbx.zone/owasp/zap2docker-weekly:latest'
-
-                        sh """
-                                            cd  ${WORKSPACE}/build-resources
-                                            chmod u+x ./Zap.sh
-                                            cd -
-                                            ./build-resources/Zap.sh \
-                                            "http://10.112.207.145:3000/" 
-                                            pwd
-                                        """
-
-                        publishHTML(
-                                [allowMissing         : false,
-                                 alwaysLinkToLastBuild: false,
-                                 keepAll              : false,
-                                 reportDir            : 'zap-reports',
-                                 reportFiles          : 'zap-report.html',
-                                 reportName           : 'ZAP Report'])
-
-                    }
-                }
-
-            }
-        }*/
-
         stage('UrbanCode') {
             agent {
                 label "cbo-jenkins-aurora"
             }
             when {
-                expression { env.BRANCH_NAME == "master" || env.BRANCH_NAME.startsWith("release-br") || env.BRANCH_NAME == "CBODIG-10206_Pipeline" }
+                expression { env.BRANCH_NAME == "master" || env.BRANCH_NAME.startsWith("release-br") }
                 expression { params.Upload_Pkg_To_UrbanCode == true }
-                //expression { params.Build_Profile != 'CI' }
+                expression { params.Build_Profile != 'CI' }
             }
             steps {
                 script {
@@ -262,7 +224,6 @@ pipeline {
                             cp -R ${WORKSPACE}/cwa/**/* .
                             cd ${WORKSPACE}
                             cp ${WORKSPACE}/build-resources/UrbanCode_client.sh .
-                            ls -l
                             chmod u+x ./UrbanCode_client.sh
                             ls -la ./UrbanCode_client.sh uc_deploy_basedir/
                             ./UrbanCode_client.sh \
