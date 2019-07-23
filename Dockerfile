@@ -14,7 +14,7 @@ COPY yarn.lock /usr/src/app/yarn.lock
 COPY .npmrc /usr/src/app/.npmrc
 
 RUN yarn install --verbose
-RUN yarn install react-scripts@3.0.1 -g --verbose
+RUN yarn global install react-scripts@3.0.1 --verbose
 
 COPY . /usr/src/app
 
