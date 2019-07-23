@@ -10,9 +10,10 @@ ENV NO_PROXY "localhost,127.0.0.1,registry.sbx.local,nexus.sbx.zone,nexus.sandbo
 ENV PATH /usr/src/app/node_modules/.bin:$PATH
 
 COPY package.json /usr/src/app/package.json
-RUN npm config set registry="https://nexus.sbx.zone/repository/npm-proxy"
-RUN npm install
-RUN npm install react-scripts@3.0.1 -g
+COPY yarn.lock /usr/src/app/yarn.lock
+RUN yarn config set registry="https://nexus.sbx.zone/repository/npm-proxy"
+RUN yarn install --verbose
+RUN yarn install react-scripts@3.0.1 -g --verbose
 
 COPY . /usr/src/app
 
