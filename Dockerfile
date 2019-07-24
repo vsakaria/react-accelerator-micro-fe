@@ -10,10 +10,11 @@ WORKDIR /usr/src/app
 ENV PATH /usr/src/app/node_modules/.bin:$PATH
 
 COPY package.json /usr/src/app/package.json
+COPY yarn.lock /usr/src/app/yarn.lock
 COPY .npmrc /usr/src/app/.npmrc
 
-RUN npm install
-RUN npm install react-scripts@3.0.1 -g --verbose
+RUN yarn install
+RUN yarn add react-scripts@3.0.1 --verbose
 
 COPY . /usr/src/app
 
