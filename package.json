@@ -25,7 +25,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "testCI": "CI=true react-scripts test --coverage --reporters=jest-junit",
+    "testCI": "react-scripts test --watchAll=false --coverage --reporters=default --reporters=jest-junit",
     "update-snap": "react-scripts test -u --watchAll=false",
     "eject": "react-scripts eject",
     "sonarqube": "sonarqube-scanner-node"
@@ -38,7 +38,8 @@
       "enzyme-to-json/serializer"
     ],
     "collectCoverageFrom": [
-      "**/src/*.{js}",
+      "src/**/*.{js,jsx,ts,tsx}",
+      "!src/**/*.d.ts",
       "!**/node_modules/**",
       "!**/coverage/**"
     ],
