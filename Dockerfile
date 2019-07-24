@@ -13,7 +13,7 @@ COPY package.json /usr/src/app/package.json
 COPY yarn.lock /usr/src/app/yarn.lock
 COPY .npmrc /usr/src/app/.npmrc
 
-RUN yarn install
+RUN yarn install --ignore-scripts
 RUN yarn add react-scripts@3.0.1 --verbose
 
 COPY . /usr/src/app
