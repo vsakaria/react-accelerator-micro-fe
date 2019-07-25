@@ -101,21 +101,12 @@ pipeline {
                 withSonarQubeEnv('CBO SonarQube Server') {
 
                     script {
-
-                        if(params.Build_Profile == 'CI') {
-
-                            sh '''
+                        sh """
                                 pwd
                                 cd /usr/src/app
-                                npm run sonarqube -- -Dsonar.branch=CI_Master         
-                            '''
-                        } else {
-                            sh '''
-                                pwd
-                                cd /usr/src/app
-                                npm run sonarqube -- -Dsonar.branch=Master         
-                            '''
-                        }
+                                npm run sonarqube -- -Dsonar.branch=${env.BRANCH_NAME} 
+
+                        """
                     }
                 }
             }
