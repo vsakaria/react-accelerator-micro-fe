@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ClientSummary should display the title 1`] = `
-<ComponentWithErrorBoundary
+<Component
   activeFrom="24/05/2019"
   adminType="Single Admin"
   id={49084369}
@@ -22,19 +22,19 @@ exports[`ClientSummary should display the title 1`] = `
         className="clientDetailContainer"
       >
         <h4
-          className="title"
+          className="primary-color"
         >
           Client details
         </h4>
-        <table>
+        <table
+          className="clientDetailTable"
+        >
           <tbody>
             <tr>
               <td>
                 Client id
               </td>
-              <td
-                className="bold"
-              >
+              <td>
                 49084369
               </td>
             </tr>
@@ -42,9 +42,7 @@ exports[`ClientSummary should display the title 1`] = `
               <td>
                 Client name
               </td>
-              <td
-                className="bold"
-              >
+              <td>
                 AutoCBS1
               </td>
             </tr>
@@ -52,9 +50,7 @@ exports[`ClientSummary should display the title 1`] = `
               <td>
                 Client status
               </td>
-              <td
-                className="bold"
-              >
+              <td>
                 Active
               </td>
             </tr>
@@ -62,9 +58,7 @@ exports[`ClientSummary should display the title 1`] = `
               <td>
                 Administration type
               </td>
-              <td
-                className="bold"
-              >
+              <td>
                 Single Admin
               </td>
             </tr>
@@ -72,9 +66,7 @@ exports[`ClientSummary should display the title 1`] = `
               <td>
                 Password expiry period
               </td>
-              <td
-                className="bold"
-              >
+              <td>
                 90 days
               </td>
             </tr>
@@ -82,9 +74,7 @@ exports[`ClientSummary should display the title 1`] = `
               <td>
                 Active form
               </td>
-              <td
-                className="bold"
-              >
+              <td>
                 24/05/2019
               </td>
             </tr>
@@ -93,5 +83,5 @@ exports[`ClientSummary should display the title 1`] = `
       </section>
     </ClientDetails>
   </ErrorBoundary>
-</ComponentWithErrorBoundary>
+</Component>
 `;
