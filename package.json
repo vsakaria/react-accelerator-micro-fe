@@ -5,7 +5,7 @@
   "dependencies": {
     "@types/enzyme-to-json": "^1.5.3",
     "@types/jest": "24.0.15",
-    "@types/node": "12.6.2",
+    "@types/node": "12.6.0",
     "@types/react": "16.8.23",
     "@types/react-dom": "16.8.4",
     "@types/react-redux": "^7.1.1",
@@ -30,11 +30,36 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
+    "testCI": "react-scripts test --watchAll=false --coverage --reporters=default --reporters=jest-junit",
     "update-snap": "react-scripts test -u --watchAll=false",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "sonarqube": "sonarqube-scanner-node"
   },
   "eslintConfig": {
     "extends": "react-app"
+  },
+  "jest": {
+    "snapshotSerializers": [
+      "enzyme-to-json/serializer"
+    ],
+    "collectCoverageFrom": [
+      "src/**/*.{js,jsx,ts,tsx}",
+      "!src/**/*.d.ts",
+      "!**/node_modules/**",
+      "!**/coverage/**"
+    ],
+    "coverageReporters": [
+      "lcov",
+      "text"
+    ]
+  },
+  "jest-junit": {
+    "suiteName": "jest tests",
+    "output": "coverage/junit.xml",
+    "classNameTemplate": "{classname} - {title}",
+    "titleTemplate": "{classname} - {title}",
+    "ancestorSeparator": " > ",
+    "usePathForSuiteName": "true"
   },
   "browserslist": {
     "production": [
@@ -53,11 +78,8 @@
     "@types/enzyme-adapter-react-16": "^1.0.5",
     "enzyme": "^3.10.0",
     "enzyme-adapter-react-16": "^1.14.0",
-    "react-test-renderer": "^16.8.6"
-  },
-  "jest": {
-    "snapshotSerializers": [
-      "enzyme-to-json/serializer"
-    ]
+    "jest-junit": "^6.4.0",
+    "react-test-renderer": "^16.8.6",
+    "sonarqube-scanner-node": "0.0.10"
   }
 }
