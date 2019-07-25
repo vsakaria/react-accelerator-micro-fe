@@ -81,7 +81,7 @@ pipeline {
             }
         }
 
-        /*stage('SONAR') {
+        stage('SONAR') {
 
             agent {
 
@@ -120,7 +120,7 @@ pipeline {
                 }
             }
 
-        }*/
+        }
 
         stage('Build App') {
 
