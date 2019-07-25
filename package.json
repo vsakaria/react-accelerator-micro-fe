@@ -79,7 +79,6 @@
     "enzyme": "^3.10.0",
     "enzyme-adapter-react-16": "^1.14.0",
     "jest-junit": "^6.4.0",
-    "react-test-renderer": "^16.8.6",
-    "sonarqube-scanner-node": "0.0.10"
+    "react-test-renderer": "^16.8.6"
   }
 }

@@ -105,10 +105,8 @@ pipeline {
                                 pwd
                                 cd /usr/src/app
                            '''
-
+                        sh 'npm install sonarqube-scanner-node@0.0.10'
                         sh "npm run sonarqube -- -Dsonar.branch=${env.BRANCH_NAME}"
-
-
                     }
                 }
             }
