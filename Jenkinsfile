@@ -101,12 +101,14 @@ pipeline {
                 withSonarQubeEnv('CBO SonarQube Server') {
 
                     script {
-                        sh """
+                        sh '''
                                 pwd
                                 cd /usr/src/app
-                                npm run sonarqube -- -Dsonar.branch=${env.BRANCH_NAME} 
+                           '''
 
-                        """
+                        sh "npm run sonarqube -- -Dsonar.branch=${env.BRANCH_NAME}"
+
+
                     }
                 }
             }
