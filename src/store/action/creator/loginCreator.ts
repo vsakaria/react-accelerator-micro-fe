@@ -1,4 +1,4 @@
-import { UPDATE_LOGIN, RESET_LOGIN } from "../constants/constants";
+import { UPDATE_LOGIN, RESET_LOGIN } from "../constants/actionConstants";
 
 export interface ILoginState {
   status: boolean;

@@ -1,6 +1,6 @@
 import { ILoginState, ILoginActionTypes } from "../action/creator/loginCreator";
 import { Reducer } from "react";
-import { UPDATE_LOGIN, RESET_LOGIN } from "../action/constants/constants";
+import { UPDATE_LOGIN, RESET_LOGIN } from "../action/constants/actionConstants";
 
 export const loginInitState: ILoginState = {
   status: false
