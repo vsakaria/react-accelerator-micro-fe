@@ -1,4 +1,3 @@
-import { clientSummary } from "./../../reducers/clientSummaryReducer";
 import { IAsyncRequest, IAsyncSuccess, IAsyncFailure } from "./IAsync";
 
 export const requestAction = (type: string): IAsyncRequest => {
