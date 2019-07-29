@@ -1,6 +1,8 @@
 import { combineReducers, Reducer } from "redux";
-import { login } from "./loginReducer";
+import { clientSummary } from "./clientSummaryReducer";
 
 export const rootReducer: Reducer<any> = combineReducers<{}>({
-  login
+  clientSummary
 });
+
+export type IAppState = ReturnType<typeof rootReducer>;
