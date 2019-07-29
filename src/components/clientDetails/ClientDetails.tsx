@@ -18,7 +18,7 @@ const ClientDetails: React.FC<IClient> = ({
         <tbody>
           <tr>
             <td>Client id</td>
-            <td>{id.toString()}</td>
+            <td>{id}</td>
           </tr>
           <tr>
             <td>Client name</td>
