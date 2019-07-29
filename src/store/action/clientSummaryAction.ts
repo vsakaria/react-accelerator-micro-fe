@@ -8,36 +8,14 @@ import { httpRequestHandler } from "../../utils/api/httpRequestHandler";
 import { IClientSummaryState } from "../reducers/IClientSummaryState";
 
 export const getClientSummaryAction = () => (dispatch: Dispatch) => {
-  clientSummaryRequestAction()(dispatch);
+  dispatch(clientSummaryRequest());
 
-  return httpRequestHandler.getRequest(`clientSummary`).then(
+  return httpRequestHandler.getRequest("/clientSummary").then(
     (data: IClientSummaryState) => {
-      return clientSummarySuccessAction(data)(dispatch);
+      return dispatch(clientSummarySuccess(data));
     },
     (error: Error) => {
-      return clientSummaryFailureAction(error)(dispatch);
+      return dispatch(clientSummaryFailure(error));
     }
   );
-};
-
-const clientSummaryRequestAction = () => (dispatch: Dispatch): void => {
-  dispatch(clientSummaryRequest());
-};
-
-const clientSummarySuccessAction = (payload: IClientSummaryState) => (
-  dispatch: Dispatch
-): void => {
-  dispatch(clientSummarySuccess(payload));
-};
-
-const clientSummaryFailureAction = (error: Error) => (
-  dispatch: Dispatch
-): void => {
-  dispatch(clientSummaryFailure(error));
-};
-
-export {
-  clientSummaryRequestAction,
-  clientSummarySuccessAction,
-  clientSummaryFailureAction
 };
