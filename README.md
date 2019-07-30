@@ -4,6 +4,10 @@
 
 Do not use `npm` to build this appllication.
 
+`npm` is a non-deterministic package manager, which means your version of `node_modules` will be different from my version of `node_modules`.
+
+`yarn` is a deterministic package manager and always reads the `yarn.lock` file first, resulting in a consistent set of modules across different clones of the project.
+
 Use `yarn`. To do this run `yarn install` in the root directory. 
 
 If you do not have `yarn` install in your CLI then you need to follow the instructions here. 
