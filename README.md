@@ -4,7 +4,7 @@
 
 Do not use `npm` to build this appllication.
 
-`npm` is a non-deterministic package manager, which means your version of `node_modules` will be different from my version of `node_modules`.
+`npm` is a non-deterministic package manager, which means your version of `node_modules` may be different from my version of `node_modules`.
 
 `yarn` is a deterministic package manager and always reads the `yarn.lock` file first, resulting in a consistent set of modules across different clones of the project.
 
