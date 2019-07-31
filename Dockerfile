@@ -9,7 +9,6 @@ COPY package.json /usr/src/app/package.json
 COPY yarn.lock /usr/src/app/yarn.lock
 COPY .npmrc /usr/src/app/.npmrc
 #Registry is picked up correctly from .npmrc file for following command
-RUN yarn config list
 RUN yarn config set registry https://nexus.sbx.zone/repository/npm-proxy/
 RUN yarn install --verbose
 
