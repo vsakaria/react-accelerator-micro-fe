@@ -12,8 +12,6 @@ COPY .npmrc /usr/src/app/.npmrc
 RUN yarn config set registry https://nexus.sbx.zone/repository/npm-proxy/
 RUN yarn install
 
-#Set Registry again here. Required as setting in .npmrc file being ignored and looking externally. Setting repository
-#earlier in script is also ignored
 RUN yarn global add react-scripts@3.0.1
 
 COPY . /usr/src/app
