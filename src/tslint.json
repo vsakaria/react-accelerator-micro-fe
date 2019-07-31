@@ -1,6 +1,15 @@
 {
-  "extends": ["tslint:recommended", "tslint-react", "tslint-config-prettier", "plugin:@typescript-eslint/eslint-recommended","plugin:@typescript-eslint/recommended"],
+  "extends": [
+    "tslint:recommended",
+    "tslint-react",
+    "tslint-config-prettier",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended"
+  ],
+  "plugins": ["react-hooks"],
   "rules": {
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn",
     "no-console": false,
     "no-var-requires": false,
     "object-literal-sort-keys": false,
@@ -8,11 +17,7 @@
     "js-no-bind": false,
     "jsx-no-lambada": false
   },
-  "linterOptions":   {
-    "exclude": [
-      "config/**/*.js",
-      "node_modules/**/*.ts",
-      "coverage/*"
-    ]
+  "linterOptions": {
+    "exclude": ["config/**/*.js", "node_modules/**/*.ts", "coverage/*"]
   }
 }

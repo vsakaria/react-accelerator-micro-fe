@@ -6,12 +6,13 @@ import { IAppState } from "../../store/reducers";
 import { getClientSummaryAction } from "../../store/action/clientSummaryAction";
 
 const ClientSummary = (props: any) => {
+  const { getClientSummaryAction } = props;
+
   useEffect(
     () => {
-      props.clientSummaryRequest();
+      getClientSummaryAction();
     },
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    []
+    [getClientSummaryAction]
   );
 
   const {
@@ -38,13 +39,21 @@ const ClientSummary = (props: any) => {
   );
 };
 
-const mapStateToProps = (store: IAppState): any => ({
+interface mapStateToProps {
+  clientSummary: {};
+}
+
+const mapStateToProps = (store: IAppState): mapStateToProps => ({
   clientSummary: store.clientSummary
 });
 
-const mapDispatchToProps = (dispatch: Dispatch<any>): any => {
+interface mapDispatchToProps {
+  getClientSummaryAction: () => void;
+}
+
+const mapDispatchToProps = (dispatch: Dispatch<any>): mapDispatchToProps => {
   return {
-    clientSummaryRequest: () => {
+    getClientSummaryAction: () => {
       dispatch(getClientSummaryAction());
     }
   };
