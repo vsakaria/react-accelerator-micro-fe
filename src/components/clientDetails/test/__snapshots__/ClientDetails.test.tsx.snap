@@ -1,14 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ClientSummary should display the title 1`] = `
-<Component
-  activeFrom="24/05/2019"
-  adminType="Single Admin"
-  id={49084369}
-  name="AutoCBS1"
-  passwordExpiryPeriod={90}
-  status="Active"
->
+<Fragment>
   <ErrorBoundary>
     <ClientDetails
       activeFrom="24/05/2019"
@@ -17,71 +10,7 @@ exports[`ClientSummary should display the title 1`] = `
       name="AutoCBS1"
       passwordExpiryPeriod={90}
       status="Active"
-    >
-      <section
-        className="clientDetailContainer"
-      >
-        <h4
-          className="primary-color"
-        >
-          Client details
-        </h4>
-        <table
-          className="clientDetailTable"
-        >
-          <tbody>
-            <tr>
-              <td>
-                Client id
-              </td>
-              <td>
-                49084369
-              </td>
-            </tr>
-            <tr>
-              <td>
-                Client name
-              </td>
-              <td>
-                AutoCBS1
-              </td>
-            </tr>
-            <tr>
-              <td>
-                Client status
-              </td>
-              <td>
-                Active
-              </td>
-            </tr>
-            <tr>
-              <td>
-                Administration type
-              </td>
-              <td>
-                Single Admin
-              </td>
-            </tr>
-            <tr>
-              <td>
-                Password expiry period
-              </td>
-              <td>
-                90 days
-              </td>
-            </tr>
-            <tr>
-              <td>
-                Active form
-              </td>
-              <td>
-                24/05/2019
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </section>
-    </ClientDetails>
+    />
   </ErrorBoundary>
-</Component>
+</Fragment>
 `;

@@ -1,6 +1,6 @@
 import React from "react";
 import ClientDetails from "../ClientDetails";
-import { mountSnapShot } from "../../../utils/testing/testing";
+import { shallowSnapShot } from "../../../utils/testing/testing";
 
 describe("ClientSummary", () => {
   it("should display the title", () => {
@@ -13,7 +13,7 @@ describe("ClientSummary", () => {
       activeFrom: "24/05/2019"
     };
 
-    const clientSummarySS = mountSnapShot(<ClientDetails {...props} />);
+    const clientSummarySS = shallowSnapShot(<ClientDetails {...props} />);
 
     expect(clientSummarySS).toMatchSnapshot();
   });

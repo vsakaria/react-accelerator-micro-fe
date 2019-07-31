@@ -5,7 +5,7 @@ import { connect } from "react-redux";
 import { IAppState } from "../../store/reducers";
 import { getClientSummaryAction } from "../../store/action/clientSummaryAction";
 
-const ClientSummary = (props: any) => {
+export const ClientSummary = (props: any) => {
   const { getClientSummaryAction } = props;
 
   useEffect(
