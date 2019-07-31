@@ -114,6 +114,9 @@ pipeline {
         }*/
 
         stage('Build App') {
+            when {
+                expression { env.BRANCH_NAME == "master" || env.BRANCH_NAME.startsWith("release-br")}
+            }
 
             agent {
 
