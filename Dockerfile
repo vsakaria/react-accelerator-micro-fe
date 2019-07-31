@@ -9,6 +9,7 @@ COPY package.json /usr/src/app/package.json
 COPY yarn.lock /usr/src/app/yarn.lock
 COPY .npmrc /usr/src/app/.npmrc
 #Registry is picked up correctly from .npmrc file for following command
+RUN yarn config list
 RUN yarn install --verbose
 
 #Set Registry again here. Required as setting in .npmrc file being ignored and looking externally. Setting repository
