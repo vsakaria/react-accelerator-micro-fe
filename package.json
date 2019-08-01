@@ -24,6 +24,7 @@
     "redux": "^4.0.4",
     "redux-devtools-extension": "^2.13.8",
     "redux-thunk": "^2.3.0",
+    "sonarqube-scanner-node": "0.0.10",
     "typescript": "3.5.3"
   },
   "scripts": {
@@ -79,7 +80,6 @@
     "enzyme": "^3.10.0",
     "enzyme-adapter-react-16": "^1.14.0",
     "jest-junit": "^6.4.0",
-    "react-test-renderer": "^16.8.6",
-    "sonarqube-scanner-node": "0.0.10"
+    "react-test-renderer": "^16.8.6"
   }
 }

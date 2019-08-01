@@ -81,7 +81,7 @@ pipeline {
             }
         }
 
-        stage('SONAR') {
+        /*stage('SONAR') {
 
             agent {
 
@@ -101,28 +101,22 @@ pipeline {
                 withSonarQubeEnv('CBO SonarQube Server') {
 
                     script {
-
-                        if(params.Build_Profile == 'CI') {
-
-                            sh '''
+                        sh '''
                                 pwd
                                 cd /usr/src/app
-                                npm run sonarqube -- -Dsonar.branch=CI_Master         
-                            '''
-                        } else {
-                            sh '''
-                                pwd
-                                cd /usr/src/app
-                                npm run sonarqube -- -Dsonar.branch=Master         
-                            '''
-                        }
+                           '''
+                        sh 'npm install sonarqube-scanner-node@0.0.10'
+                        sh "npm run sonarqube -- -Dsonar.branch=${env.BRANCH_NAME}"
                     }
                 }
             }
 
-        }
+        }*/
 
         stage('Build App') {
+            when {
+                expression { env.BRANCH_NAME == "master" || env.BRANCH_NAME.startsWith("release-br")}
+            }
 
             agent {
 
