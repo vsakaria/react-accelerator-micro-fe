@@ -19,7 +19,7 @@ Run `yarn start`
 
 # Running Tests
 
-The project uses both Jest Snapshot testing and enzymes DOM query testing. Black box and White box respectively. 
+The project uses both Jest Snapshot testing and enzymes DOM query testing. Black box and White box testing respectively. 
 You should use Snapshot testing for components that have no moving parts ie. no state and simply render some markup based on props. Enzyme is used for more dynamic components such as one which have click event or state changes. 
 
 If you are writting new test you need to follow the convensation `*.test.tsx` or `*.test.ts`.
