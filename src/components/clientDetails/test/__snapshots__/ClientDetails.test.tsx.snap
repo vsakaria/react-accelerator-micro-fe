@@ -3,7 +3,6 @@
 exports[`ClientSummary should display the title 1`] = `
 <section
   className="clientDetailContainer"
-  id="client-details"
 >
   <h4
     className="primary-color"
