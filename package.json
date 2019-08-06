@@ -36,7 +36,7 @@
     "update-snap": "react-scripts test -u --watchAll=false",
     "testCI": "react-scripts test --watchAll=false --coverage --reporters=default --reporters=jest-junit",
     "coverage": "yarn test --coverage --watchAll=false && yarn open-coverage",
-    "open-coverage": "open file:///Users/vishalsakaria/code/client-summary-application/coverage/lcov-report/index.html",
+    "open-coverage": "open ./coverage/lcov-report/index.html",
     "eject": "react-scripts eject",
     "sonarqube": "sonarqube-scanner-node"
   },
