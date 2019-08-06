@@ -3,7 +3,7 @@ import { IClient } from "../IClient";
 import { withErrorBoundary } from "../../utils/components/ErrorBoundaryHoC";
 import styles from "./styles/ClientDetails.module.css";
 
-const ClientDetails: React.FC<IClient> = ({
+export const ClientDetails: React.FC<IClient> = ({
   id,
   name,
   status,
