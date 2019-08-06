@@ -830,6 +830,273 @@
     exec-sh "^0.3.2"
     minimist "^1.2.0"
 
+"@constellation/Accordion@^1.0.14":
+  version "1.0.15"
+  resolved "http://nexus.sandbox.extranet.group/nexus/content/groups/npm-master/@constellation/Accordion/-/Accordion-1.0.15.tgz#5f4767d02e74e60c504ed6353d495400c012813a"
+
+"@constellation/Box@^1.0.9":
+  version "1.0.9"
+  resolved "http://nexus.sandbox.extranet.group/nexus/content/groups/npm-master/@constellation/Box/-/Box-1.0.9.tgz#7b3751382fd3fd514f59f936356b97ea6e1b0731"
+  dependencies:
+    classnames "^2.2.6"
+
+"@constellation/BrandProvider@^1.0.8":
+  version "1.0.8"
+  resolved "http://nexus.sandbox.extranet.group/nexus/content/groups/npm-master/@constellation/BrandProvider/-/BrandProvider-1.0.8.tgz#8a95d4a9fbc9a211e1830e1df1f61f021e655d19"
+
+"@constellation/Button@^1.0.23":
+  version "1.0.23"
+  resolved "http://nexus.sandbox.extranet.group/nexus/content/groups/npm-master/@constellation/Button/-/Button-1.0.23.tgz#bc60a7ddadd1b5896d410b759a25fc62abcd7e7f"
+
+"@constellation/ButtonPattern@^1.0.8":
+  version "1.0.8"
+  resolved "http://nexus.sandbox.extranet.group/nexus/content/groups/npm-master/@constellation/ButtonPattern/-/ButtonPattern-1.0.8.tgz#fb2349b2aee0e6b0dacf65903d9757a1457f0f36"
+
+"@constellation/Card@^1.0.8":
+  version "1.0.8"
+  resolved "http://nexus.sandbox.extranet.group/nexus/content/groups/npm-master/@constellation/Card/-/Card-1.0.8.tgz#9b1143ed93410e6b0477652326a2a6e81a370912"
+
+"@constellation/Checkbox@^1.1.4":
+  version "1.1.4"
+  resolved "http://nexus.sandbox.extranet.group/nexus/content/groups/npm-master/@constellation/Checkbox/-/Checkbox-1.1.4.tgz#a84706d1302fb9a9c5313c6c3f816fcdadf37cd1"
+  dependencies:
+    classnames "^2.2.6"
+
+"@constellation/Column@^1.0.9":
+  version "1.0.9"
+  resolved "http://nexus.sandbox.extranet.group/nexus/content/groups/npm-master/@constellation/Column/-/Column-1.0.9.tgz#2be10db1b6326e483f37b2c1b298297193cedf7a"
+
+"@constellation/Confirmation@^1.1.4":
+  version "1.1.4"
+  resolved "http://nexus.sandbox.extranet.group/nexus/content/groups/npm-master/@constellation/Confirmation/-/Confirmation-1.1.4.tgz#27a8e32ccb5428ae8078e5c6129fd0fa0dee5991"
+  dependencies:
+    classnames "^2.2.6"
+
+"@constellation/CurrencyField@^1.2.5":
+  version "1.2.5"
+  resolved "http://nexus.sandbox.extranet.group/nexus/content/groups/npm-master/@constellation/CurrencyField/-/CurrencyField-1.2.5.tgz#c8f4eb8c39aee781deab06db34b420f41a4f4f9e"
+  dependencies:
+    classnames "^2.2.6"
+
+"@constellation/DateField@^1.1.4":
+  version "1.1.4"
+  resolved "http://nexus.sandbox.extranet.group/nexus/content/groups/npm-master/@constellation/DateField/-/DateField-1.1.4.tgz#c0d85500e70c924a14c03bba93536b02f15af511"
+  dependencies:
+    classnames "^2.2.6"
+
+"@constellation/Dialog@^1.0.11":
+  version "1.0.11"
+  resolved "http://nexus.sandbox.extranet.group/nexus/content/groups/npm-master/@constellation/Dialog/-/Dialog-1.0.11.tgz#10e687b773eb20bda592a9a2efae8de5b40f9053"
+  dependencies:
+    classnames "^2.2.6"
+
+"@constellation/Dropdown@^1.0.14":
+  version "1.0.14"
+  resolved "http://nexus.sandbox.extranet.group/nexus/content/groups/npm-master/@constellation/Dropdown/-/Dropdown-1.0.14.tgz#f03d01be3598de5a267604703dae34cfe2fdfdfa"
+
+"@constellation/ErrorSummary@^1.0.8":
+  version "1.0.8"
+  resolved "http://nexus.sandbox.extranet.group/nexus/content/groups/npm-master/@constellation/ErrorSummary/-/ErrorSummary-1.0.8.tgz#afd0654a7dd2450fb951f2ae09ceb24d1b6cce99"
+  dependencies:
+    classnames "^2.2.6"
+
+"@constellation/ErrorSummaryItem@^1.0.8":
+  version "1.0.8"
+  resolved "http://nexus.sandbox.extranet.group/nexus/content/groups/npm-master/@constellation/ErrorSummaryItem/-/ErrorSummaryItem-1.0.8.tgz#faacf360951a6027cfa833a854937e193ae2b758"
+  dependencies:
+    classnames "^2.2.6"
+
+"@constellation/FieldError@^1.0.8":
+  version "1.0.8"
+  resolved "http://nexus.sandbox.extranet.group/nexus/content/groups/npm-master/@constellation/FieldError/-/FieldError-1.0.8.tgz#d42b7d990585ba21c68d8e3d9c28a57ef886654a"
+  dependencies:
+    classnames "^2.2.6"
+
+"@constellation/FieldLabel@^1.0.8":
+  version "1.0.8"
+  resolved "http://nexus.sandbox.extranet.group/nexus/content/groups/npm-master/@constellation/FieldLabel/-/FieldLabel-1.0.8.tgz#c837e8b73e8eebc589000c8d600f5df00147769e"
+
+"@constellation/Footer@^1.0.8":
+  version "1.0.8"
+  resolved "http://nexus.sandbox.extranet.group/nexus/content/groups/npm-master/@constellation/Footer/-/Footer-1.0.8.tgz#a2d94bb2c0dfdfd9b4e7b6d2fda87a7beb2cf315"
+
+"@constellation/FooterItem@^1.0.8":
+  version "1.0.8"
+  resolved "http://nexus.sandbox.extranet.group/nexus/content/groups/npm-master/@constellation/FooterItem/-/FooterItem-1.0.8.tgz#c45c23cbcff8b82f70c4d0792d0007383d7d352d"
+
+"@constellation/Header@^1.0.8":
+  version "1.0.8"
+  resolved "http://nexus.sandbox.extranet.group/nexus/content/groups/npm-master/@constellation/Header/-/Header-1.0.8.tgz#9d8cac6e3e501b998dbea9a9169f04c574baf7d3"
+
+"@constellation/Heading@^1.0.15":
+  version "1.0.15"
+  resolved "http://nexus.sandbox.extranet.group/nexus/content/groups/npm-master/@constellation/Heading/-/Heading-1.0.15.tgz#d3f1fa5b11726a44e947866eb047646cacb7a13a"
+  dependencies:
+    classnames "^2.2.6"
+
+"@constellation/Hr@^1.0.11":
+  version "1.0.11"
+  resolved "http://nexus.sandbox.extranet.group/nexus/content/groups/npm-master/@constellation/Hr/-/Hr-1.0.11.tgz#acf1052b40af3893a2789d6d4a3ce3f262b7495e"
+
+"@constellation/Icon@^1.0.21":
+  version "1.0.21"
+  resolved "http://nexus.sandbox.extranet.group/nexus/content/groups/npm-master/@constellation/Icon/-/Icon-1.0.21.tgz#03dd2d0ef7d0fc6f919b2bfad154b794d8ace1e9"
+  dependencies:
+    classnames "^2.2.6"
+
+"@constellation/LabeledField@^1.1.7":
+  version "1.1.7"
+  resolved "http://nexus.sandbox.extranet.group/nexus/content/groups/npm-master/@constellation/LabeledField/-/LabeledField-1.1.7.tgz#2f128fd0cd5b178d0700e34c97a30a28603b76dc"
+  dependencies:
+    classnames "^2.2.6"
+
+"@constellation/Link@^1.0.16":
+  version "1.0.16"
+  resolved "http://nexus.sandbox.extranet.group/nexus/content/groups/npm-master/@constellation/Link/-/Link-1.0.16.tgz#c36460363a02de6ab415e33c0ddac3cc1419668f"
+  dependencies:
+    classnames "^2.2.6"
+
+"@constellation/List@^1.0.8":
+  version "1.0.8"
+  resolved "http://nexus.sandbox.extranet.group/nexus/content/groups/npm-master/@constellation/List/-/List-1.0.8.tgz#93659c022442dae643331492c907cca8e617baf5"
+
+"@constellation/ListItem@^1.0.10":
+  version "1.0.10"
+  resolved "http://nexus.sandbox.extranet.group/nexus/content/groups/npm-master/@constellation/ListItem/-/ListItem-1.0.10.tgz#c35d7de5fa50fabe19af62fd9edbba10526e85f2"
+  dependencies:
+    classnames "^2.2.6"
+
+"@constellation/Main@^1.0.8":
+  version "1.0.8"
+  resolved "http://nexus.sandbox.extranet.group/nexus/content/groups/npm-master/@constellation/Main/-/Main-1.0.8.tgz#be54e8e4d49b4642bce17f92a444ac5c3c3c0bf7"
+
+"@constellation/MemorableDate@^1.0.11":
+  version "1.0.11"
+  resolved "http://nexus.sandbox.extranet.group/nexus/content/groups/npm-master/@constellation/MemorableDate/-/MemorableDate-1.0.11.tgz#2334c33a6e145ff8fccba43c6d37b39112b048ba"
+
+"@constellation/Notification@^1.0.11":
+  version "1.0.11"
+  resolved "http://nexus.sandbox.extranet.group/nexus/content/groups/npm-master/@constellation/Notification/-/Notification-1.0.11.tgz#d2bbd4b4288450867ce95230ea014431328ddceb"
+  dependencies:
+    classnames "^2.2.6"
+
+"@constellation/NumberField@^1.3.4":
+  version "1.3.4"
+  resolved "http://nexus.sandbox.extranet.group/nexus/content/groups/npm-master/@constellation/NumberField/-/NumberField-1.3.4.tgz#84aa2a59754cb09d4e8ab90ff46e123a5bcc1c08"
+  dependencies:
+    classnames "^2.2.6"
+
+"@constellation/Option@^1.0.8":
+  version "1.0.8"
+  resolved "http://nexus.sandbox.extranet.group/nexus/content/groups/npm-master/@constellation/Option/-/Option-1.0.8.tgz#00f33fc09834dd3b7c90fa0dd3c0e1ce8e483e4d"
+
+"@constellation/Page@^1.0.8":
+  version "1.0.8"
+  resolved "http://nexus.sandbox.extranet.group/nexus/content/groups/npm-master/@constellation/Page/-/Page-1.0.8.tgz#ff9f968e7e4448da5234dd7659887839603d7630"
+
+"@constellation/Paragraph@^1.1.4":
+  version "1.1.4"
+  resolved "http://nexus.sandbox.extranet.group/nexus/content/groups/npm-master/@constellation/Paragraph/-/Paragraph-1.1.4.tgz#d1be37508d628601edcc854ed21c2b81498b8c56"
+
+"@constellation/PostcodeField@^1.0.8":
+  version "1.0.8"
+  resolved "http://nexus.sandbox.extranet.group/nexus/content/groups/npm-master/@constellation/PostcodeField/-/PostcodeField-1.0.8.tgz#e25ec8d1dd6bc0f80a5489fe14646c1beac3020d"
+
+"@constellation/RadioButton@^1.1.4":
+  version "1.1.4"
+  resolved "http://nexus.sandbox.extranet.group/nexus/content/groups/npm-master/@constellation/RadioButton/-/RadioButton-1.1.4.tgz#114fd5f9cd493104a17c3052a667e3a6da7034f5"
+  dependencies:
+    classnames "^2.2.6"
+
+"@constellation/RadioButtonGroup@^1.0.8":
+  version "1.0.8"
+  resolved "http://nexus.sandbox.extranet.group/nexus/content/groups/npm-master/@constellation/RadioButtonGroup/-/RadioButtonGroup-1.0.8.tgz#2cbdb130f7fa432c637909feaf7782d117b38d34"
+
+"@constellation/Row@^1.0.8":
+  version "1.0.8"
+  resolved "http://nexus.sandbox.extranet.group/nexus/content/groups/npm-master/@constellation/Row/-/Row-1.0.8.tgz#72fe526492cd6485b1ce729cdbf5a1c90788b605"
+
+"@constellation/Select@^1.1.4":
+  version "1.1.4"
+  resolved "http://nexus.sandbox.extranet.group/nexus/content/groups/npm-master/@constellation/Select/-/Select-1.1.4.tgz#0d34154de78891c46b976c73342611127b0ad57b"
+  dependencies:
+    classnames "^2.2.6"
+
+"@constellation/SelectField@^1.0.8":
+  version "1.0.8"
+  resolved "http://nexus.sandbox.extranet.group/nexus/content/groups/npm-master/@constellation/SelectField/-/SelectField-1.0.8.tgz#2da25bdeeaa30d105d2e173e2ccde9ed51f05a08"
+
+"@constellation/Selector@^1.0.11":
+  version "1.0.11"
+  resolved "http://nexus.sandbox.extranet.group/nexus/content/groups/npm-master/@constellation/Selector/-/Selector-1.0.11.tgz#7d1dfd61c805a0a9f07513879e033775135681ac"
+
+"@constellation/SelectorItem@^1.1.7":
+  version "1.1.7"
+  resolved "http://nexus.sandbox.extranet.group/nexus/content/groups/npm-master/@constellation/SelectorItem/-/SelectorItem-1.1.7.tgz#2ac10c003cf2412dad903c58ba07d18836d17f50"
+  dependencies:
+    classnames "^2.2.6"
+
+"@constellation/Strong@^1.0.8":
+  version "1.0.8"
+  resolved "http://nexus.sandbox.extranet.group/nexus/content/groups/npm-master/@constellation/Strong/-/Strong-1.0.8.tgz#a948378a6b1db4fa7158fdaafe46204be9ee1cae"
+
+"@constellation/SummaryBox@^1.0.9":
+  version "1.0.9"
+  resolved "http://nexus.sandbox.extranet.group/nexus/content/groups/npm-master/@constellation/SummaryBox/-/SummaryBox-1.0.9.tgz#5db31d9ed1a436c8b241973dc5e98f25fa22b69c"
+  dependencies:
+    classnames "^2.2.6"
+
+"@constellation/SupportiveText@^1.0.8":
+  version "1.0.8"
+  resolved "http://nexus.sandbox.extranet.group/nexus/content/groups/npm-master/@constellation/SupportiveText/-/SupportiveText-1.0.8.tgz#8aec857117b0a4284c29e560b13480e5c1a5c2cf"
+
+"@constellation/Switch@^1.0.9":
+  version "1.0.9"
+  resolved "http://nexus.sandbox.extranet.group/nexus/content/groups/npm-master/@constellation/Switch/-/Switch-1.0.9.tgz#85a6dca3cc77d21c6a916f0a71727f163fd2046b"
+
+"@constellation/Tab@^1.0.8":
+  version "1.0.8"
+  resolved "http://nexus.sandbox.extranet.group/nexus/content/groups/npm-master/@constellation/Tab/-/Tab-1.0.8.tgz#0f8a7722dd8cb7ea9ac3c2315f9d19d63626bc0a"
+
+"@constellation/Tabs@^1.0.13":
+  version "1.0.13"
+  resolved "http://nexus.sandbox.extranet.group/nexus/content/groups/npm-master/@constellation/Tabs/-/Tabs-1.0.13.tgz#85d6502fdf43aeb5818d94438705c1cfbfd07497"
+  dependencies:
+    classnames "^2.2.6"
+    uuid "^3.3.2"
+
+"@constellation/Text@^1.0.8":
+  version "1.0.8"
+  resolved "http://nexus.sandbox.extranet.group/nexus/content/groups/npm-master/@constellation/Text/-/Text-1.0.8.tgz#9e2aab2b3527c67a3cec27d871ae812988460295"
+  dependencies:
+    classnames "^2.2.6"
+
+"@constellation/TextField@^1.0.9":
+  version "1.0.9"
+  resolved "http://nexus.sandbox.extranet.group/nexus/content/groups/npm-master/@constellation/TextField/-/TextField-1.0.9.tgz#e181198efe5e1702cf2ab8676ae3c465bc553e7d"
+
+"@constellation/TextInput@^1.1.4":
+  version "1.1.4"
+  resolved "http://nexus.sandbox.extranet.group/nexus/content/groups/npm-master/@constellation/TextInput/-/TextInput-1.1.4.tgz#95371d700c0a56d1a45a22f599cbda71fe4a9d44"
+  dependencies:
+    classnames "^2.2.6"
+
+"@constellation/Tooltip@^1.0.9":
+  version "1.0.9"
+  resolved "http://nexus.sandbox.extranet.group/nexus/content/groups/npm-master/@constellation/Tooltip/-/Tooltip-1.0.9.tgz#03c7d0ea3cb83854248f873fcbbcdd384219a24d"
+  dependencies:
+    classnames "^2.2.6"
+    popper.js "^1.14.3"
+    uuid "^3.3.2"
+
+"@constellation/constants@^1.0.8":
+  version "1.0.8"
+  resolved "http://nexus.sandbox.extranet.group/nexus/content/groups/npm-master/@constellation/constants/-/constants-1.0.8.tgz#bdca0c0ac0b5f6f15e3800cc38c1a023dfef448c"
+
+"@constellation/utils@^1.0.10":
+  version "1.0.10"
+  resolved "http://nexus.sandbox.extranet.group/nexus/content/groups/npm-master/@constellation/utils/-/utils-1.0.10.tgz#fde0c3a51ecaee374f6a20f240415616effb6884"
+
 "@csstools/convert-colors@^1.4.0":
   version "1.4.0"
   resolved "http://nexus.sandbox.extranet.group/nexus/content/groups/npm-master/@csstools/convert-colors/-/convert-colors-1.4.0.tgz#ad495dc41b12e75d588c6db8b9834f08fa131eb7"
@@ -1004,6 +1271,65 @@
     "@types/istanbul-lib-coverage" "^2.0.0"
     "@types/istanbul-reports" "^1.1.1"
     "@types/yargs" "^12.0.9"
+
+"@lbg/constellation@^8.2.1":
+  version "8.2.1"
+  resolved "http://nexus.sandbox.extranet.group/nexus/content/groups/npm-master/@lbg/constellation/-/constellation-8.2.1.tgz#8d01ccb1dae2bc3b64b2f748794dea2f228c45f2"
+  dependencies:
+    "@constellation/Accordion" "^1.0.14"
+    "@constellation/Box" "^1.0.9"
+    "@constellation/BrandProvider" "^1.0.8"
+    "@constellation/Button" "^1.0.23"
+    "@constellation/ButtonPattern" "^1.0.8"
+    "@constellation/Card" "^1.0.8"
+    "@constellation/Checkbox" "^1.1.4"
+    "@constellation/Column" "^1.0.9"
+    "@constellation/Confirmation" "^1.1.4"
+    "@constellation/CurrencyField" "^1.2.5"
+    "@constellation/DateField" "^1.1.4"
+    "@constellation/Dialog" "^1.0.11"
+    "@constellation/Dropdown" "^1.0.14"
+    "@constellation/ErrorSummary" "^1.0.8"
+    "@constellation/ErrorSummaryItem" "^1.0.8"
+    "@constellation/FieldError" "^1.0.8"
+    "@constellation/FieldLabel" "^1.0.8"
+    "@constellation/Footer" "^1.0.8"
+    "@constellation/FooterItem" "^1.0.8"
+    "@constellation/Header" "^1.0.8"
+    "@constellation/Heading" "^1.0.15"
+    "@constellation/Hr" "^1.0.11"
+    "@constellation/Icon" "^1.0.21"
+    "@constellation/LabeledField" "^1.1.7"
+    "@constellation/Link" "^1.0.16"
+    "@constellation/List" "^1.0.8"
+    "@constellation/ListItem" "^1.0.10"
+    "@constellation/Main" "^1.0.8"
+    "@constellation/MemorableDate" "^1.0.11"
+    "@constellation/Notification" "^1.0.11"
+    "@constellation/NumberField" "^1.3.4"
+    "@constellation/Option" "^1.0.8"
+    "@constellation/Page" "^1.0.8"
+    "@constellation/Paragraph" "^1.1.4"
+    "@constellation/PostcodeField" "^1.0.8"
+    "@constellation/RadioButton" "^1.1.4"
+    "@constellation/RadioButtonGroup" "^1.0.8"
+    "@constellation/Row" "^1.0.8"
+    "@constellation/Select" "^1.1.4"
+    "@constellation/SelectField" "^1.0.8"
+    "@constellation/Selector" "^1.0.11"
+    "@constellation/SelectorItem" "^1.1.7"
+    "@constellation/Strong" "^1.0.8"
+    "@constellation/SummaryBox" "^1.0.9"
+    "@constellation/SupportiveText" "^1.0.8"
+    "@constellation/Switch" "^1.0.9"
+    "@constellation/Tab" "^1.0.8"
+    "@constellation/Tabs" "^1.0.13"
+    "@constellation/Text" "^1.0.8"
+    "@constellation/TextField" "^1.0.9"
+    "@constellation/TextInput" "^1.1.4"
+    "@constellation/Tooltip" "^1.0.9"
+    "@constellation/constants" "^1.0.8"
+    "@constellation/utils" "^1.0.10"
 
 "@mrmlnc/readdir-enhanced@^2.2.1":
   version "2.2.1"
@@ -2372,7 +2698,7 @@ class-utils@^0.3.5:
     isobject "^3.0.0"
     static-extend "^0.1.1"
 
-classnames@^2.2.3:
+classnames@^2.2.3, classnames@^2.2.6:
   version "2.2.6"
   resolved "http://nexus.sandbox.extranet.group/nexus/content/groups/npm-master/classnames/-/classnames-2.2.6.tgz#43935bffdd291f326dad0a205309b38d00f650ce"
 
@@ -6968,7 +7294,7 @@ pnp-webpack-plugin@1.2.1:
   dependencies:
     ts-pnp "^1.0.0"
 
-popper.js@^1.14.1, popper.js@^1.14.4:
+popper.js@^1.14.1, popper.js@^1.14.3, popper.js@^1.14.4:
   version "1.15.0"
   resolved "http://nexus.sandbox.extranet.group/nexus/content/groups/npm-master/popper.js/-/popper.js-1.15.0.tgz#5560b99bbad7647e9faa475c6b8056621f5a4ff2"
 
