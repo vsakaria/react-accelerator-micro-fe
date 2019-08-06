@@ -33,6 +33,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "testCI": "react-scripts test --watchAll=false --coverage --reporters=default --reporters=jest-junit",
+    "coverage": "yarn test --coverage --watchAll=false",
     "update-snap": "react-scripts test -u --watchAll=false",
     "eject": "react-scripts eject",
     "sonarqube": "sonarqube-scanner-node"
@@ -82,5 +83,27 @@
     "enzyme-adapter-react-16": "^1.14.0",
     "jest-junit": "^6.4.0",
     "react-test-renderer": "^16.8.6"
+  },
+  "jest": {
+    "coverageThreshold": {
+      "global": {
+        "branches": 90,
+        "functions": 90,
+        "lines": 90,
+        "statements": 90
+      }
+    },
+    "collectCoverageFrom": [
+      "src/**/*.{ts,tsx}",
+      "!src/store/applicationStore.ts",
+      "!src/*.{d.ts}",
+      "!node_modules/",
+      "!src/serviceWorker.ts",
+      "!src/react-app-env.d.ts",
+      "!src/**/index.{ts,tsx}",
+      "!src/**/I[A-Z]*.ts",
+      "!src/shared/store/applicationStore.ts",
+      "!src/App.tsx"
+    ]
   }
 }
