@@ -32,6 +32,13 @@ Refer to https://facebook.github.io/watchman/docs/install.html for install detai
 Run `yarn test` to run the suite of test.
 Run `yarn update-snap` to update failing snapshot tests.
 
+# Code coverage
+
+You can run the coverage reporter using 
+
+`yarn coverage`
+
+This will open a window in Chrome showing the current test coverage of the project.
 
 # Typescript
 
