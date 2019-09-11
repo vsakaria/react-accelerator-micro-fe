@@ -3,18 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@types/enzyme-to-json": "^1.5.3",
     "@lbg/constellation": "^8.2.1",
-    "@types/jest": "24.0.15",
-    "@types/node": "12.6.0",
-    "@types/react": "16.8.23",
-    "@types/react-dom": "16.8.4",
-    "@types/react-redux": "^7.1.1",
-    "@types/react-router": "^5.0.3",
-    "@types/react-router-dom": "^4.3.4",
-    "@types/reactstrap": "^8.0.1",
-    "enzyme-to-json": "^3.3.5",
-    "eslint-plugin-react-hooks": "^1.6.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-redux": "^7.1.0",
@@ -23,10 +12,8 @@
     "react-scripts": "3.0.1",
     "reactstrap": "^8.0.1",
     "redux": "^4.0.4",
-    "redux-devtools-extension": "^2.13.8",
-    "redux-thunk": "^2.3.0",
-    "sonarqube-scanner-node": "0.0.10",
-    "typescript": "3.5.3"
+    "redux-thunk": "^2.3.0"
+    
   },
   "scripts": {
     "start": "react-scripts start",
@@ -64,10 +51,24 @@
   "devDependencies": {
     "@types/enzyme": "^3.10.3",
     "@types/enzyme-adapter-react-16": "^1.0.5",
+    "@types/enzyme-to-json": "^1.5.3",
+    "@types/jest": "24.0.15",
+    "@types/node": "12.6.0",
+    "@types/react": "16.8.23",
+    "@types/react-dom": "16.8.4",
+    "@types/react-redux": "^7.1.1",
+    "@types/react-router": "^5.0.3",
+    "@types/react-router-dom": "^4.3.4",
+    "@types/reactstrap": "^8.0.1",
     "enzyme": "^3.10.0",
     "enzyme-adapter-react-16": "^1.14.0",
     "jest-junit": "^6.4.0",
-    "react-test-renderer": "^16.8.6"
+    "react-test-renderer": "^16.8.6",
+    "enzyme-to-json": "^3.3.5",
+    "eslint-plugin-react-hooks": "^1.6.0",
+    "redux-devtools-extension": "^2.13.8",
+    "sonarqube-scanner-node": "0.0.10",
+    "typescript": "3.5.3"
   },
   "jest": {
     "snapshotSerializers": [
