@@ -38,7 +38,7 @@ You can run the coverage reporter using
 
 `yarn coverage`
 
-This will open a window in Chrome showing the current test coverage of the project.
+This will open a window in you default browser showing the current test coverage of the project.
 
 # Typescript
 
