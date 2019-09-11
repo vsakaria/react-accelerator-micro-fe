@@ -1,4 +1,4 @@
-# Client-summary-application
+# React Accelerator seed project
 
 # Installation.
 
