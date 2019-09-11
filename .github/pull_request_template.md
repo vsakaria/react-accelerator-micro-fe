@@ -1,1 +1,0 @@
-IMPORTANT: Please remember to raise any environment Jiras before 3pm on the day you merge your code into Master branch and to include CIT3 in the request, otherwise your code will fail the overnight regression tests on CIT3. All code changes also need to have a corresponding automated test case.
