@@ -59,7 +59,7 @@ See: https://github.com/css-modules/css-modules for more info.
 There are 3 level of error capturing within the application.
 
 1. Component level.
-When errors occur within a component, for exmaple `toString` being called on a property which is a `number` the `ErrorBoundary` captures this and displays JSX with an error message. The root `App.tsx` is wrapped in an `ErrorBoundary` component which means all component level errors are captured. However if a child component throws an errors no components are rendered. For this reason you can wrap each component you feel may fail in `ErrorBoundary` however the downside to this is that you will have `ErrorBoundary` scattered thoughtout the code base. For this reason we have wrapped the `ErrorBoundary` in highier order component, this allows us to call the HoC when exporting the component you want to handle errors. Please see `ErrorBoundaryHoC.tsx`.
+When errors occur within a component, for exmaple `toString()` being called on a property which is a `number` the `ErrorBoundary` captures this and displays JSX with an error message. The root `App.tsx` is wrapped in an `ErrorBoundary` component which means all component level errors are captured. However if a child component throws an errors no components are rendered. For this reason you can wrap each component you feel may fail in `ErrorBoundary` however the downside to this is that you will have `ErrorBoundary` scattered thoughtout the code base. For this reason we have wrapped the `ErrorBoundary` in highier order component, this allows us to call the HoC when exporting the component you want to handle errors. Please see `ErrorBoundaryHoC.tsx`.
 
 2. API call level.
 TBC
