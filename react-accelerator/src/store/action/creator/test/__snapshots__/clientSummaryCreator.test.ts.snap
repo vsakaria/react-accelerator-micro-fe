@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ClientSummary Action Creator should creator a failure action 1`] = `
+Object {
+  "data": Object {
+    "error": true,
+    "loading": false,
+    "message": "SOME ERROR MESSAGE",
+  },
+  "type": "CLIENT_SUMMARY_FAILURE",
+}
+`;
+
+exports[`ClientSummary Action Creator should creator a request action 1`] = `
+Object {
+  "data": Object {
+    "loading": true,
+  },
+  "type": "CLIENT_SUMMARY_REQUEST",
+}
+`;
+
+exports[`ClientSummary Action Creator should creator a success action 1`] = `
+Object {
+  "data": Object {
+    "data": "some_data",
+    "loading": false,
+  },
+  "type": "CLIENT_SUMMARY_SUCCESS",
+}
+`;
