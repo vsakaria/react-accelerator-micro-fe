@@ -9,4 +9,10 @@ const getRequest = (url: string) => {
   });
 };
 
-export const httpRequestHandler = { getRequest };
+const postRequest = (url: string, payload: {}) => {
+  return Promise.resolve({
+    success: true
+  });
+}
+
+export const httpRequestHandler = { getRequest, postRequest };
