@@ -11,13 +11,9 @@ export const successAction = (type: string, payload: any): IAsyncSuccess => {
   };
 };
 
-export const failureAction = (type: string, error: Error): IAsyncFailure => {
+export const failureAction = (type: string, errorData: any): IAsyncFailure => {
   return {
     type,
-    data: {
-      error: true,
-      message: error.message,
-      loading: false
-    }
+    data: Object.assign({}, errorData, { loading: false })
   };
 };
