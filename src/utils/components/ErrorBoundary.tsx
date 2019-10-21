@@ -1,12 +1,28 @@
 import React from "react";
+import { StatusCode, ICwaError, } from "../../store/customMiddleware/ICwaError";
+import { connect } from "react-redux";
+import { IAppState } from "../../store/reducers";
+import { httpRequestHandler } from "../api/httpRequestHandler";
+import { ERROR_LOGGING } from "../api/urlConstants";
 
-class ErrorBoundary extends React.Component {
+
+class ErrorBoundary extends React.Component<any> {
   state = { hasError: false };
 
-  componentDidCatch(error: any, info: any) {
+  componentDidCatch(err: any, info: any) {
     this.setState({ hasError: true });
-    console.log(error, info);
+
+    const data: ICwaError = {
+      loggingLevel: 'error',
+      cwaStatusCode: StatusCode.ReactComponentError,
+      stackTrack: info.componentStack,
+      applicationState: this.props.state,
+      message: 'There was an error in a component'
+    }
+    httpRequestHandler.postRequest(ERROR_LOGGING, data)
+    console.error("An error occured in a React component", data);
   }
+
 
   render() {
     if (this.state.hasError) {
@@ -16,4 +32,12 @@ class ErrorBoundary extends React.Component {
   }
 }
 
-export default ErrorBoundary;
+interface IErrorBoundaryProps {
+  state: {};
+}
+
+const mapStateToProps = (store: IAppState): IErrorBoundaryProps => ({
+  state: store
+});
+
+export default connect(mapStateToProps, null)(ErrorBoundary);
