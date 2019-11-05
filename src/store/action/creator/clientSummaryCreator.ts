@@ -1,15 +1,15 @@
 import {
+  CLIENT_SUMMARY_FAILURE,
   CLIENT_SUMMARY_REQUEST,
-  CLIENT_SUMMARY_SUCCESS,
-  CLIENT_SUMMARY_FAILURE
+  CLIENT_SUMMARY_SUCCESS
 } from "../constants/actionConstants";
 
-import { IAsyncFailure, IAsyncSuccess, IAsyncRequest } from "./IAsync";
 import {
+  failureAction,
   requestAction,
-  successAction,
-  failureAction
+  successAction
 } from "./httpActionCreators";
+import { IAsyncFailure, IAsyncRequest, IAsyncSuccess } from "./IAsync";
 
 export const clientSummaryRequest = (): IAsyncRequest =>
   requestAction(CLIENT_SUMMARY_REQUEST);

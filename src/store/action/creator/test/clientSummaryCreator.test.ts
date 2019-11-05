@@ -1,7 +1,7 @@
 import {
+  clientSummaryFailure,
   clientSummaryRequest,
-  clientSummarySuccess,
-  clientSummaryFailure
+  clientSummarySuccess
 } from "../clientSummaryCreator";
 
 describe("ClientSummary Action Creator", () => {

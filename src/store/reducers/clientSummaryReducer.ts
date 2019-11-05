@@ -1,7 +1,7 @@
 import {
+  CLIENT_SUMMARY_FAILURE,
   CLIENT_SUMMARY_REQUEST,
   CLIENT_SUMMARY_SUCCESS,
-  CLIENT_SUMMARY_FAILURE,
   IClientSummaryActionTypes
 } from "../action/constants/actionConstants";
 import { IClientSummaryState } from "./IClientSummaryState";

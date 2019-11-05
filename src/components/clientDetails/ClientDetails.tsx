@@ -1,6 +1,6 @@
 import React from "react";
-import { IClient } from "../IClient";
 import { withErrorBoundary } from "../../utils/components/ErrorBoundaryHoC";
+import { IClient } from "../IClient";
 import styles from "./styles/ClientDetails.module.css";
 
 export const ClientDetails: React.FC<IClient> = ({

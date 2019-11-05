@@ -1,4 +1,4 @@
-import { IAsyncRequest, IAsyncSuccess, IAsyncFailure } from "./IAsync";
+import { IAsyncFailure, IAsyncRequest, IAsyncSuccess } from "./IAsync";
 
 export const requestAction = (type: string): IAsyncRequest => {
   return { type, data: { loading: true } };

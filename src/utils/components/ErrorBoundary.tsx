@@ -1,14 +1,14 @@
 import React from "react";
 
 class ErrorBoundary extends React.Component {
-  state = { hasError: false };
+  public state = { hasError: false };
 
-  componentDidCatch(error: any, info: any) {
+  public componentDidCatch(error: any, info: any) {
     this.setState({ hasError: true });
     console.log(error, info);
   }
 
-  render() {
+  public render() {
     if (this.state.hasError) {
       return <h1>Something went wrong.</h1>;
     }

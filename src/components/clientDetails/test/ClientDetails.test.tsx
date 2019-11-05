@@ -1,10 +1,10 @@
-import React from "react";
-import { ClientDetails } from "../ClientDetails";
-import { shallowSnapShot } from "../../../utils/testing/testing";
 import { shallow } from "enzyme";
+import React from "react";
+import { shallowSnapShot } from "../../../utils/testing/testing";
+import { ClientDetails } from "../ClientDetails";
 
 describe("ClientSummary", () => {
-  let props = {
+  const props = {
     id: 49084369,
     name: "AutoCBS1",
     status: "Active",

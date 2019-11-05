@@ -1,11 +1,11 @@
 import { Dispatch } from "redux";
-import {
-  clientSummaryRequest,
-  clientSummarySuccess,
-  clientSummaryFailure
-} from "./creator/clientSummaryCreator";
 import { httpRequestHandler } from "../../utils/api/httpRequestHandler";
 import { IClientSummaryState } from "../reducers/IClientSummaryState";
+import {
+  clientSummaryFailure,
+  clientSummaryRequest,
+  clientSummarySuccess
+} from "./creator/clientSummaryCreator";
 
 export const getClientSummaryAction = () => (dispatch: Dispatch) => {
   dispatch(clientSummaryRequest());
