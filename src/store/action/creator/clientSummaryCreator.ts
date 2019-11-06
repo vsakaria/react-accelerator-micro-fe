@@ -9,13 +9,13 @@ import {
   requestAction,
   successAction
 } from "./httpActionCreators";
-import { IAsyncFailure, IAsyncRequest, IAsyncSuccess } from "./IAsync";
+import { AsyncFailure, AsyncRequest, AsyncSuccess } from "./IAsync";
 
-export const clientSummaryRequest = (): IAsyncRequest =>
+export const clientSummaryRequest = (): AsyncRequest =>
   requestAction(CLIENT_SUMMARY_REQUEST);
 
-export const clientSummarySuccess = (payload: any): IAsyncSuccess =>
+export const clientSummarySuccess = (payload: any): AsyncSuccess =>
   successAction(CLIENT_SUMMARY_SUCCESS, payload);
 
-export const clientSummaryFailure = (error: Error): IAsyncFailure =>
+export const clientSummaryFailure = (error: Error): AsyncFailure =>
   failureAction(CLIENT_SUMMARY_FAILURE, error);

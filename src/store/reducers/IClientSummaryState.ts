@@ -1,4 +1,4 @@
-export interface IClientSummaryState {
+export interface ClientSummaryState {
   id: number;
   name: string;
   status: string;

@@ -1,16 +1,16 @@
-import React, { Dispatch, useEffect } from "react";
+import React, { Dispatch, useEffect, ReactElement } from "react";
 import { connect } from "react-redux";
 import { getClientSummaryAction } from "../../store/action/clientSummaryAction";
 import { IAppState } from "../../store/reducers";
-import ClientDetails from "../clientDetails/ClientDetails";
 import styles from "./styles/ClientSummary.module.css";
+import ClientDetails from "../clientDetails/ClientDetails";
 
-export const ClientSummary = (props: any) => {
+export const ClientSummary = (props: any): ReactElement => {
   const { getClientSummaryAction } = props;
 
   useEffect(() => {
     getClientSummaryAction();
-  }, []);
+  }, [getClientSummaryAction]);
 
   const {
     id,
@@ -36,21 +36,21 @@ export const ClientSummary = (props: any) => {
   );
 };
 
-interface IMapStateToProps {
+interface MapStateToProps {
   clientSummary: {};
 }
 
-const mapStateToProps = (store: IAppState): IMapStateToProps => ({
+const mapStateToProps = (store: IAppState): MapStateToProps => ({
   clientSummary: store.clientSummary
 });
 
-interface IMapDispatchToProps {
+interface MapDispatchToProps {
   getClientSummaryAction: () => void;
 }
 
-const mapDispatchToProps = (dispatch: Dispatch<any>): IMapDispatchToProps => {
+const mapDispatchToProps = (dispatch: Dispatch<any>): MapDispatchToProps => {
   return {
-    getClientSummaryAction: () => {
+    getClientSummaryAction: (): void => {
       dispatch(getClientSummaryAction());
     }
   };

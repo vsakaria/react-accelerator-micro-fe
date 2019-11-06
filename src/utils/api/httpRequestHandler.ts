@@ -1,4 +1,4 @@
-const getRequest = (url: string) => {
+const getRequest = (): Promise<any> => {
   return Promise.resolve({
     id: 46892093,
     name: "AutoCBS1",

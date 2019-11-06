@@ -1,4 +1,4 @@
-export interface IAsyncFailure {
+export interface AsyncFailure {
   type: string;
   data: {
     error: boolean;
@@ -7,7 +7,7 @@ export interface IAsyncFailure {
   };
 }
 
-export interface IAsyncSuccess<T = any> {
+export interface AsyncSuccess<T = any> {
   type: string;
   data: {
     payload: T;
@@ -15,7 +15,7 @@ export interface IAsyncSuccess<T = any> {
   };
 }
 
-export interface IAsyncRequest {
+export interface AsyncRequest {
   type: string;
   data: {
     loading: boolean;
