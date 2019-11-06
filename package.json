@@ -4,7 +4,6 @@
   "private": true,
   "dependencies": {
     "@lbg/constellation": "^8.2.1",
-    "husky": "^3.0.9",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-redux": "^7.1.0",
@@ -24,16 +23,12 @@
     "coverage": "yarn test --coverage --watchAll=false && yarn open-coverage",
     "open-coverage": "open ./coverage/lcov-report/index.html",
     "sonarqube": "sonarqube-scanner-node",
-    "lint": "tslint -c src/tslint.json 'src/**/*.{ts,tsx}'"
+    "eslint": "eslint --fix 'src/**/*.{ts,tsx}'"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "yarn coverage && yarn lint",
-      "pre-push": "yarn coverage && yarn lint"
+      "pre-push": "yarn coverage && yarn eslint"
     }
-  },
-  "eslintConfig": {
-    "extends": "react-app"
   },
   "jest-junit": {
     "suiteName": "jest tests",
@@ -70,13 +65,19 @@
     "enzyme": "^3.10.0",
     "enzyme-adapter-react-16": "^1.14.0",
     "enzyme-to-json": "^3.3.5",
-    "eslint-plugin-react-hooks": "^1.6.0",
     "jest-junit": "^6.4.0",
     "react-test-renderer": "^16.8.6",
     "redux-devtools-extension": "^2.13.8",
     "sonarqube-scanner-node": "0.0.10",
-    "tslint": "^5.20.0",
-    "typescript": "^3.6.4"
+    "typescript": "^3.6.4",
+    "@typescript-eslint/eslint-plugin": "^2.6.1",
+    "@typescript-eslint/parser": "^2.6.1",
+    "eslint": "^6.6.0",
+    "eslint-config-prettier": "^6.5.0",
+    "eslint-plugin-react": "^7.16.0",
+    "eslint-plugin-react-hooks": "^2.2.0",
+    "husky": "^3.0.9",
+    "prettier": "^1.18.2"
   },
   "jest": {
     "snapshotSerializers": [
