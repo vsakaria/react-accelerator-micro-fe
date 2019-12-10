@@ -12,11 +12,15 @@
     "react-scripts": "3.2.0",
     "reactstrap": "^8.0.1",
     "redux": "^4.0.4",
-    "redux-thunk": "^2.3.0"
+    "redux-thunk": "^2.3.0",
+    "single-spa": "^4.4.1",
+    "single-spa-react": "^2.10.4"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "prod": "webpack --env.mode production",
+    "serve": "serve -s dist",
     "test": "react-scripts test --env=jsdom",
     "update-snap": "react-scripts test -u --watchAll=false",
     "testCI": "react-scripts test --watchAll=false --coverage --reporters=default --reporters=jest-junit",
@@ -51,7 +55,12 @@
     ]
   },
   "devDependencies": {
+    "@babel/core": "^7.6.4",
     "@babel/plugin-syntax-jsx": "^7.2.0",
+    "@babel/plugin-syntax-typescript": "^7.3.3",
+    "@babel/preset-env": "^7.6.3",
+    "@babel/preset-react": "^7.6.3",
+    "@babel/preset-typescript": "^7.6.0",
     "@types/enzyme": "^3.10.3",
     "@types/enzyme-adapter-react-16": "^1.0.5",
     "@types/enzyme-to-json": "^1.5.3",
@@ -65,6 +74,10 @@
     "@types/reactstrap": "^8.0.1",
     "@typescript-eslint/eslint-plugin": "^2.6.1",
     "@typescript-eslint/parser": "^2.6.1",
+    "babel-loader": "^8.0.6",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "brotli-gzip-webpack-plugin": "^0.5.0",
+    "brotli-webpack-plugin": "^1.1.0",
     "enzyme": "^3.10.0",
     "enzyme-adapter-react-16": "^1.14.0",
     "enzyme-to-json": "^3.3.5",
@@ -78,7 +91,9 @@
     "react-test-renderer": "^16.8.6",
     "redux-devtools-extension": "^2.13.8",
     "sonarqube-scanner-node": "0.0.10",
-    "typescript": "^3.6.4"
+    "typescript": "^3.6.4",
+    "webpack-cli": "^3.3.9",
+    "webpack-merge": "^4.2.2"
   },
   "jest": {
     "snapshotSerializers": [
