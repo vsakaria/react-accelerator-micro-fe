@@ -4,12 +4,15 @@ import { Provider } from "react-redux";
 import App from "./App";
 import "./index.css";
 import configureStore from "./store/applicationStore";
+import { BrandProviderLoader } from "./utils/components/BrandProviderLoader";
 
 const store = configureStore();
 
 ReactDOM.render(
   <Provider store={store}>
-    <App />
+    <BrandProviderLoader>
+      <App />
+    </BrandProviderLoader>
   </Provider>,
   document.getElementById("root")
 );
