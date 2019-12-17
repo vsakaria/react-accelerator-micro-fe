@@ -5,14 +5,17 @@ import App from "./App";
 import "./index.css";
 import configureStore from "./store/applicationStore";
 import { BrandProviderLoader } from "./utils/components/BrandProviderLoader";
+import { renderApp } from "../src/utils/microfrontend/singleSpaHelper";
 
 const store = configureStore();
-
-ReactDOM.render(
-  <Provider store={store}>
-    <BrandProviderLoader>
+if (process.env.NODE_ENV === "development") {
+  ReactDOM.render(
+    <Provider store={store}>
       <App />
-    </BrandProviderLoader>
-  </Provider>,
-  document.getElementById("root")
-);
+    </Provider>,
+    document.getElementById("root")
+  );
+} else {
+  renderApp("React", "react-app");
+}
+
