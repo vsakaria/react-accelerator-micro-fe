@@ -13,7 +13,7 @@ const App: React.FC = () => (
       <Container fluid={true} className="outerContainer">
         <Container fluid={false} className="innerContainer">
           <Provider store={store}>
-            <Router>
+            <Router basename="/clientSummary">
               <Route exact={true} path="/" component={ClientSummary} />
             </Router>
           </Provider>
