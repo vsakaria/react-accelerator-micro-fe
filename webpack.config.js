@@ -68,7 +68,13 @@ module.exports = (
                   modules: true
                 }
               }
-            ]
+            ],
+            include: /\.module\.css$/
+          },
+          {
+            test: /\.css$/,
+            use: ["style-loader", "css-loader"],
+            exclude: /\.module\.css$/
           },
           {
             test: /\.(png|woff|woff2|eot|ttf|svg)$/,
