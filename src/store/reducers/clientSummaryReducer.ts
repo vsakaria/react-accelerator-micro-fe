@@ -1,12 +1,12 @@
 import {
+  CLIENT_SUMMARY_FAILURE,
   CLIENT_SUMMARY_REQUEST,
   CLIENT_SUMMARY_SUCCESS,
-  CLIENT_SUMMARY_FAILURE,
-  IClientSummaryActionTypes
+  ClientSummaryActionTypes
 } from "../action/constants/actionConstants";
-import { IClientSummaryState } from "./IClientSummaryState";
+import { ClientSummaryState } from "./IClientSummaryState";
 
-export const clientSummaryState: IClientSummaryState = {
+export const clientSummaryState: ClientSummaryState = {
   id: 0,
   name: "",
   status: "",
@@ -16,8 +16,8 @@ export const clientSummaryState: IClientSummaryState = {
 };
 
 export const clientSummary = (
-  state: IClientSummaryState = clientSummaryState,
-  action: IClientSummaryActionTypes
+  state: ClientSummaryState = clientSummaryState,
+  action: ClientSummaryActionTypes
 ): any => {
   switch (action.type) {
     case CLIENT_SUMMARY_REQUEST:

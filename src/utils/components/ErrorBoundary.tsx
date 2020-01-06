@@ -5,7 +5,6 @@ import { IAppState } from "../../store/reducers";
 import { httpRequestHandler } from "../api/httpRequestHandler";
 import { ERROR_LOGGING } from "../api/urlConstants";
 
-
 class ErrorBoundary extends React.Component<any> {
   state = { hasError: false };
 
@@ -22,7 +21,6 @@ class ErrorBoundary extends React.Component<any> {
     httpRequestHandler.postRequest(ERROR_LOGGING, data)
     console.error("An error occured in a React component", data);
   }
-
 
   render() {
     if (this.state.hasError) {
