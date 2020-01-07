@@ -9,10 +9,11 @@ const getRequest = (): Promise<any> => {
   });
 };
 
-const postRequest = (url: string, payload: {}) => {
+const postRequest = (url: string, payload: {}): Promise<any> => {
+  console.log("Mocking", url, payload);
   return Promise.resolve({
     success: true
   });
-}
+};
 
 export const httpRequestHandler = { getRequest, postRequest };

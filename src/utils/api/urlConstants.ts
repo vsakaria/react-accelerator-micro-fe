@@ -1,1 +1,1 @@
-export const ERROR_LOGGING: string = '/cbo/cwa/logging/log';
+export const ERROR_LOGGING = '/cbo/cwa/logging/log';

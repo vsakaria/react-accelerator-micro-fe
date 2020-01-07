@@ -2,7 +2,8 @@ import {
   applyMiddleware,
   createStore,
   DeepPartial,
-  StoreEnhancer
+  StoreEnhancer,
+  StoreCreator
 } from "redux";
 import thunk from "redux-thunk";
 import { rootReducer } from "./reducers";
@@ -12,7 +13,9 @@ import {
   reduxApiErrorHandlingMiddleware
 } from "./customMiddleware/reduxErrorHandling";
 
-export default function configureStore(preloadedState?: DeepPartial<{}>) {
+export default function configureStore(
+  preloadedState?: DeepPartial<{}>
+): StoreCreator {
   const middlewares = [
     thunk,
     reduxErrorHandlingMiddleware,
