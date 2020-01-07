@@ -11,13 +11,10 @@ export const successAction = (type: string, payload: any): AsyncSuccess => {
   };
 };
 
+
 export const failureAction = (type: string, error: Error): AsyncFailure => {
   return {
     type,
-    data: {
-      error: true,
-      message: error.message,
-      loading: false
-    }
+    data: Object.assign({}, errorData, { loading: false })
   };
 };
