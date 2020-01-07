@@ -2,8 +2,7 @@
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const webpackMerge = require("webpack-merge");
 const modeConfig = mode => require(`./build-utils/webpack.${mode}.js`)(mode);
-// const BrotliPlugin = require("brotli-webpack-plugin");
-const BrotliGzipPlugin = require("brotli-gzip-webpack-plugin");
+const CompressionPlugin = require("compression-webpack-plugin");
 module.exports = (
   { mode } = {
     mode: ""
@@ -18,18 +17,18 @@ module.exports = (
           filename: "index.html",
           hash: true
         }),
-        new BrotliGzipPlugin({
-          asset: "[path].br[query]",
-          algorithm: "brotli",
-          test: /\.(ts|tsx|js|css|html|svg)$/,
-          threshold: 10240,
-          minRatio: 0.8,
-          quality: 11
-        }),
-        new BrotliGzipPlugin({
-          asset: "[path].gz[query]",
+        new CompressionPlugin({
+          filename: "[path].gz[query]",
           algorithm: "gzip",
           test: /\.(ts|tsx|js|css|html|svg)$/,
+          threshold: 10240,
+          minRatio: 0.8
+        }),
+        new CompressionPlugin({
+          filename: "[path].br[query]",
+          algorithm: "brotliCompress",
+          test: /\.(ts|tsx|js|css|html|svg)$/,
+          compressionOptions: { level: 11 },
           threshold: 10240,
           minRatio: 0.8
         })
@@ -69,7 +68,13 @@ module.exports = (
                   modules: true
                 }
               }
-            ]
+            ],
+            include: /\.module\.css$/
+          },
+          {
+            test: /\.css$/,
+            use: ["style-loader", "css-loader"],
+            exclude: /\.module\.css$/
           },
           {
             test: /\.(png|woff|woff2|eot|ttf|svg)$/,
