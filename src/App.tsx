@@ -6,20 +6,33 @@ import "./assets/global/css/Global.module.css";
 import configureStore from "./store/applicationStore";
 import ClientSummary from "./components/clientSummary/ClientSummary";
 import ErrorBoundary from "./utils/components/ErrorBoundary";
+import { BrandProviderLoader } from "./utils/components/BrandProviderLoader";
+
 const store = configureStore();
-const App: React.FC = () => (
+
+interface App {
+  appName: string;
+}
+
+const App: React.FC<App> = (props: App) => (
   <>
-    <ErrorBoundary>
-      <Container fluid={true} className="outerContainer">
-        <Container fluid={false} className="innerContainer">
-          <Provider store={store}>
-            <Router basename="/clientSummary">
-              <Route exact={true} path="/" component={ClientSummary} />
-            </Router>
-          </Provider>
-        </Container>
+    <Container fluid={true} className="outerContainer">
+      <Container fluid={false} className="innerContainer">
+        <Provider store={store}>
+          <ErrorBoundary>
+            <BrandProviderLoader>
+              <Router basename={`/${props.appName.toLocaleLowerCase()}`}>
+                <Route
+                  exact={true}
+                  path="/clientSummary"
+                  component={ClientSummary}
+                />
+              </Router>
+            </BrandProviderLoader>
+          </ErrorBoundary>
+        </Provider>
       </Container>
-    </ErrorBoundary>
+    </Container>
   </>
 );
 export default App;
