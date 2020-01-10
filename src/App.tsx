@@ -6,7 +6,7 @@ import "./assets/global/css/Global.module.css";
 import configureStore from "./store/applicationStore";
 import ClientSummary from "./components/clientSummary/ClientSummary";
 import ErrorBoundary from "./utils/components/ErrorBoundary";
-import { BrandProviderLoader } from "./utils/components/BrandProviderLoader";
+import { BrandProviderLoader } from "./utils/components/BrandProviderLoader/BrandProviderLoader";
 const store = configureStore();
 
 interface App {
