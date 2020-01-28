@@ -16,11 +16,11 @@ export const ClientDetails: React.FC<Client> = ({
       <h4 className="primary-color">Client details</h4>
       <table className={styles.clientDetailTable}>
         <tbody>
-          <tr>
+          <tr data-testid="client-id">
             <td>Client id</td>
             <td>{id}</td>
           </tr>
-          <tr>
+          <tr data-testid="client-name">
             <td>Client name</td>
             <td>{name}</td>
           </tr>
@@ -48,4 +48,4 @@ export const ClientDetails: React.FC<Client> = ({
   );
 };
 
-export default withErrorBoundary(ClientDetails);
+export default withErrorBoundary(ClientDetails)("Pass this message");

@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ClientSummary match the snapshot 1`] = `
+exports[`ClientSummary match the snapshot: Normal props with password expiry 1 1`] = `
 <DocumentFragment>
   <section
     class="clientDetailContainer"
@@ -14,7 +14,9 @@ exports[`ClientSummary match the snapshot 1`] = `
       class="clientDetailTable"
     >
       <tbody>
-        <tr>
+        <tr
+          data-testid="client-id"
+        >
           <td>
             Client id
           </td>
@@ -22,7 +24,9 @@ exports[`ClientSummary match the snapshot 1`] = `
             49084369
           </td>
         </tr>
-        <tr>
+        <tr
+          data-testid="client-name"
+        >
           <td>
             Client name
           </td>
@@ -52,6 +56,78 @@ exports[`ClientSummary match the snapshot 1`] = `
           </td>
           <td>
             1 day
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Active form
+          </td>
+          <td>
+            24/05/2019
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+</DocumentFragment>
+`;
+
+exports[`ClientSummary renders 90 days text: Normal props with password expiry 90 1`] = `
+<DocumentFragment>
+  <section
+    class="clientDetailContainer"
+  >
+    <h4
+      class="primary-color"
+    >
+      Client details
+    </h4>
+    <table
+      class="clientDetailTable"
+    >
+      <tbody>
+        <tr
+          data-testid="client-id"
+        >
+          <td>
+            Client id
+          </td>
+          <td>
+            49084369
+          </td>
+        </tr>
+        <tr
+          data-testid="client-name"
+        >
+          <td>
+            Client name
+          </td>
+          <td>
+            AutoCBS1
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Client status
+          </td>
+          <td>
+            Active
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Administration type
+          </td>
+          <td>
+            Single Admin
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Password expiry period
+          </td>
+          <td>
+            90 days
           </td>
         </tr>
         <tr>

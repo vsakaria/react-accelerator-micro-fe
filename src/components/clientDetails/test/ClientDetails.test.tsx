@@ -1,8 +1,8 @@
-import { shallow } from "enzyme";
 import React from "react";
-import { shallowSnapShot } from "../../../utils/testing/testingComposers";
 import { ClientDetails } from "../ClientDetails";
-import { render } from "../../../utils/testing/testingUtlis";
+import { render, cleanup } from "../../../utils/testing/testingUtlis";
+
+afterEach(cleanup);
 
 describe("ClientSummary", () => {
   const props = {
@@ -16,14 +16,15 @@ describe("ClientSummary", () => {
 
   it("match the snapshot", () => {
     const { asFragment } = render(<ClientDetails {...props} />);
-    expect(asFragment()).toMatchSnapshot();
+    expect(asFragment()).toMatchSnapshot("Normal props with password expiry 1");
   });
 
   it("renders 90 days text", () => {
     props.passwordExpiryPeriod = 90;
-
-    const { getByText } = render(<ClientDetails {...props} />);
-    expect(getByText(/90 days/i)).toBeInTheDocument();
+    const { asFragment } = render(<ClientDetails {...props} />);
+    expect(asFragment()).toMatchSnapshot(
+      "Normal props with password expiry 90"
+    );
   });
 
   it("inserts text in h1", () => {
