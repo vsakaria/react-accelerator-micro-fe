@@ -48,4 +48,4 @@ export const ClientDetails: React.FC<Client> = ({
   );
 };
 
-export default withErrorBoundary(ClientDetails)("Pass this message");
+export default withErrorBoundary(ClientDetails);
