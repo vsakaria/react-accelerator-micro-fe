@@ -8,12 +8,12 @@ import { createStore, applyMiddleware } from "redux";
 import { rootReducer } from "../../store/reducers";
 import thunk from "redux-thunk";
 
-const BrandProviderTestWrapper = ({ children }: any): any => {
+const BrandProviderTestWrapper = ({ children }: any): ReactElement => {
   return <BrandProvider brand={LLOYDS}>{children}</BrandProvider>;
 };
 
-const customRender = (ui: any, options = {}): any =>
-  render(ui, { wrapper: BrandProviderTestWrapper, ...options });
+const customRender = (component: ReactElement, options = {}): any =>
+  render(component, { wrapper: BrandProviderTestWrapper, ...options });
 
 // re-export everything
 export * from "@testing-library/react";
@@ -22,19 +22,19 @@ export * from "@testing-library/react";
 export { customRender as render };
 
 // Integration helper functions.
-export function renderWithReduxThunk(ui: any): any {
+export function renderWithReduxThunk(component: ReactElement): {} {
   const store = createStore(rootReducer, applyMiddleware(thunk));
   return {
-    ...customRender(<Provider store={store}>{ui}</Provider>),
+    ...customRender(<Provider store={store}>{component}</Provider>),
     store
   };
 }
 
-export function renderWithRedux(ui: ReactElement): any {
+export function renderWithRedux(component: ReactElement): {} {
   const store = createStore(rootReducer);
 
   return {
-    ...customRender(<Provider store={store}>{ui}</Provider>),
+    ...customRender(<Provider store={store}>{component}</Provider>),
     store
   };
 }
