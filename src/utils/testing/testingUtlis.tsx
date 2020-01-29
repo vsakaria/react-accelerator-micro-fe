@@ -12,7 +12,7 @@ const BrandProviderTestWrapper = ({ children }: any): any => {
   return <BrandProvider brand={LLOYDS}>{children}</BrandProvider>;
 };
 
-const customRender = (ui: any, options = {}) =>
+const customRender = (ui: any, options = {}): any =>
   render(ui, { wrapper: BrandProviderTestWrapper, ...options });
 
 // re-export everything
@@ -22,11 +22,10 @@ export * from "@testing-library/react";
 export { customRender as render };
 
 // Integration helper functions.
-export function renderWithReduxThunk(ui: ReactElement): any {
+export function renderWithReduxThunk(ui: any): any {
   const store = createStore(rootReducer, applyMiddleware(thunk));
-
   return {
-    ...render(<Provider store={store}>{ui}</Provider>),
+    ...customRender(<Provider store={store}>{ui}</Provider>),
     store
   };
 }
@@ -35,7 +34,7 @@ export function renderWithRedux(ui: ReactElement): any {
   const store = createStore(rootReducer);
 
   return {
-    ...render(<Provider store={store}>{ui}</Provider>),
+    ...customRender(<Provider store={store}>{ui}</Provider>),
     store
   };
 }
