@@ -1,9 +1,8 @@
-import { shallow } from "enzyme";
 import React from "react";
+import { render } from "./utils/testing/testingUtlis";
 import App from "./App";
 
-it("renders without crashing", () => {
-  const wrapper = shallow(<App appName="SOME_APP" />);
-
-  expect(wrapper).toBeDefined();
+it("renders welcome message", () => {
+  const { getByTestId } = render(<App appName="SOME_APP" />);
+  expect(getByTestId(/clientSummary/i)).toBeInTheDocument();
 });

@@ -1,7 +1,8 @@
-import { shallow } from "enzyme";
 import React from "react";
-import { shallowSnapShot } from "../../../utils/testing/testing";
 import { ClientDetails } from "../ClientDetails";
+import { render, cleanup } from "../../../utils/testing/testingUtlis";
+
+afterEach(cleanup);
 
 describe("ClientSummary", () => {
   const props = {
@@ -9,24 +10,25 @@ describe("ClientSummary", () => {
     name: "AutoCBS1",
     status: "Active",
     adminType: "Single Admin",
-    passwordExpiryPeriod: 90,
+    passwordExpiryPeriod: 1,
     activeFrom: "24/05/2019"
   };
 
-  it("should display the title", () => {
-    const clientSummarySS = shallowSnapShot(<ClientDetails {...props} />);
-    expect(clientSummarySS).toMatchSnapshot();
+  it("match the snapshot", () => {
+    const { asFragment } = render(<ClientDetails {...props} />);
+    expect(asFragment()).toMatchSnapshot("Normal props with password expiry 1");
   });
 
-  it("should display the title", () => {
-    props.passwordExpiryPeriod = 1;
+  it("renders 90 days text", () => {
+    props.passwordExpiryPeriod = 90;
+    const { asFragment } = render(<ClientDetails {...props} />);
+    expect(asFragment()).toMatchSnapshot(
+      "Normal props with password expiry 90"
+    );
+  });
 
-    const clientSummarySS = shallow(<ClientDetails {...props} />);
-    const dayNodeText = clientSummarySS
-      .find("td")
-      .at(9)
-      .text();
-
-    expect(dayNodeText).toEqual("1 day");
+  it("inserts text in h1", () => {
+    const { getByText } = render(<ClientDetails {...props} />);
+    expect(getByText("Client details")).toHaveClass("primary-color");
   });
 });

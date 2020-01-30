@@ -18,7 +18,11 @@ const App: React.FC<App> = props => (
     <Provider store={store}>
       <BrandProviderLoader>
         <ErrorBoundary>
-          <Container fluid={true} className="outerContainer">
+          <Container
+            data-testid="clientSummary"
+            fluid={true}
+            className="outerContainer"
+          >
             <Container fluid={false} className="innerContainer">
               <Router basename={`/${props.appName.toLocaleLowerCase()}`}>
                 <Route
