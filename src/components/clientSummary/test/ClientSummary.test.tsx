@@ -1,9 +1,9 @@
 import React from "react";
 import {
-  cleanup,
-  waitForElement,
   renderWithReduxThunk
 } from "../../../utils/testing/testingUtlis";
+import { cleanup, waitForElement } from "@testing-library/react";
+
 import ClientSummary from "../ClientSummary";
 
 afterAll(cleanup);

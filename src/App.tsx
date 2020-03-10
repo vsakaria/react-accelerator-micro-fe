@@ -6,17 +6,12 @@ import "./assets/global/css/Global.module.css";
 import configureStore from "./store/applicationStore";
 import ClientSummary from "./components/clientSummary/ClientSummary";
 import ErrorBoundary from "./utils/components/ErrorBoundary";
-import { BrandProviderLoader } from "./utils/components/BrandProviderLoader/BrandProviderLoader";
 const store = configureStore();
 
-interface App {
-  appName: string;
-}
 
-const App: React.FC<App> = props => (
+const App: React.FC = () => (
   <>
     <Provider store={store}>
-      <BrandProviderLoader>
         <ErrorBoundary>
           <Container
             data-testid="clientSummary"
@@ -24,7 +19,7 @@ const App: React.FC<App> = props => (
             className="outerContainer"
           >
             <Container fluid={false} className="innerContainer">
-              <Router basename={`/${props.appName.toLocaleLowerCase()}`}>
+              <Router>
                 <Route
                   exact={true}
                   path="/clientSummary"
@@ -34,7 +29,6 @@ const App: React.FC<App> = props => (
             </Container>
           </Container>
         </ErrorBoundary>
-      </BrandProviderLoader>
     </Provider>
   </>
 );
