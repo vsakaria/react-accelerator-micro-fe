@@ -17,16 +17,6 @@ https://yarnpkg.com/en/docs/getting-started
 
 Run `yarn start`
 
-
-# Using Constellation
-Constellation is a design system create for Lloyd's banking group and affiliated companies. The documentation can be found here: http://constellation.lbg.eu-gb.mybluemix.net/components/lloyds/button/web
-
-The accelerator includes a component called `BrandProviderLoader` which allows constellation to work. Under the hood this component uses constellation's `BrandProvider` which uses React context API to pass a brand `string` value to certain constellation components. The brands are 'lloyds', 'bos' and 'halifax' at the time of writing. 
-
-The `BrandProviderLoader` also loads the correct `css` by sniffing the `hostname`. For example a `hostname` of `www.cbo.lloyds` would load the 'lloyds' `.css` file.
-
-The `BrandProviderLoader` should be wrapped around the `<App />` component at your will.
-
 # Running Tests
 
 The project uses both Jest Snapshot testing and enzymes DOM query testing. Black box and White box testing respectively. 
